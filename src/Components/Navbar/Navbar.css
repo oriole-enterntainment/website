@@ -1,0 +1,150 @@
+* {
+    transition: .5s ease;
+}
+
+.navbar {
+    
+    width: 94%;
+    padding: 10px 12px 12px 40px;
+    margin: 15px auto 0px auto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 2px 15px -6px;
+}
+
+#navbarBox {
+    z-index: 100;
+    background-color: white;
+    transition: position 1s top 1s;
+}
+
+button {
+    background: linear-gradient(to left,  #ff0000,#FF4500, #FFA500,#ffe600, #FFA500, #ff0000);
+    border: 2px solid #1C1C1C;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    color: #010101;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#navbarLogo {
+    height: auto;
+    width: 80px;
+}
+
+.navbar a,
+.navbar li {
+    color: grey;
+    font-weight: 100;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 15px;
+    font-size: 15px;
+    font-family: roborto;
+    cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar li:hover {
+    color: indianred;
+    cursor: hover;
+}
+
+.menuButton {
+    height: 25px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    margin: 0px 10px;
+
+}
+
+.menuButton .bar {
+    width: 100%;
+    height: 12%;
+    background-color: rgb(31, 28, 31);
+    transition: 0.4s ease;
+}
+
+#submenu {
+    position: relative;
+}
+
+#submenuList {
+    position: absolute;
+    list-style: none;
+    border: 1px grey solid;
+    border-radius: 10px;
+    padding: 8px;
+    line-height: 26px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 2px 15px -6px;
+    background-color: white;
+    text-align: right;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+}
+
+#submenu:hover #submenuList {
+    cursor: pointer;
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+    right: 20px;
+    z-index: 100;
+}
+
+@media screen and (max-width:900px) {
+    .menuButton {
+        display: flex;
+    }
+
+    #navbarLinks {
+        display: none;
+    }
+}
+
+/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm   VERTICAL NAVBAR   mmmmmmmmmmmmmmmmmmm */
+
+#navbar2links {
+    height: 94%;
+    position: fixed;
+    width: 0;
+    overflow: hidden;
+    background-color: #f5ebe0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8%;
+    z-index: 100;
+    box-shadow: 0px 0px 5px grey;
+}
+
+#navbar2links a {
+    color: orangered;
+    font-size: 22px;
+    padding: 10px 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#navbar2links a:hover {
+    font-size: 25px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: position 1s top 1s;
+}

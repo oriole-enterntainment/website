@@ -1,0 +1,142 @@
+.footer {
+  background-color: #071527;
+  color: white;
+}
+
+.footersection {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footersection1 p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footersection1 img {
+  height: 20px;
+  width: 20px;
+}
+
+.footersection1 a:hover {
+  background-color: #ed502e;
+}
+
+.fb-insta-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.fb-insta-icons a {
+  padding: 2%;
+  border-radius: 5px;
+  background-color: #091c35;
+}
+
+.footersection1,
+.footersection2,
+.footersection3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footersection1 p {
+  margin-bottom: 5%;
+}
+
+.footersection2 li {
+  margin: 15% 0%;
+  list-style-type: none;
+}
+
+.footersection2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.footersection2 img {
+  height: 10px;
+}
+
+.footersection2 a:hover {
+  color: #ed502e;
+}
+
+.footersection1>div {
+  padding: 10%;
+  background-color: #05101e;
+  border-top: 5px solid #ed502e;
+}
+
+.sub-buttonstyle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  padding: 4% 6%;
+  background-image: linear-Gradient(to right, #af05d0, #c500bd, #d500ab, #df009a, #e6118b, #f2287c, #fa3d6e, #ff5262, #ff6f51, #ff8d41, #ffaa37, #fcc737)
+}
+
+.sub-button {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-end {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  border-top: 1px solid rgba(51, 74, 177, 0.301);
+  padding: 1.5%;
+}
+
+.footer-end p {
+  font-size: 0.9rem;
+  margin-bottom: 1%;
+}
+
+.footer-end span {
+  color: #ed502e;
+}
+
+@media screen and (max-width: 1000px) {
+  .footersection {
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10%;
+  }
+
+  .footersection3 {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footersection {
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+  }
+
+  .footersection2 {
+    margin-top: 80px;
+  }
+
+  .footersection2 li {
+    margin: 3% 0%;
+    list-style-type: none;
+  }
+
+  .footersection3 {
+    margin-top: 80px;
+  }
+
+  .footer-end {
+    padding: 5% 0%;
+  }
+}

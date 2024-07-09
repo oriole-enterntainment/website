@@ -1,0 +1,176 @@
+#contactus {
+  /* border: 2px solid red; */
+  background-color: #f7f9fd;
+  padding: 1% 2%;
+}
+
+#contactus-grid {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+}
+
+#grid-part1,
+#grid-part2 {
+  width: 48%;
+}
+
+#our-address {
+  height: 180px;
+  margin-bottom: 3%;
+}
+
+#email-us {
+  height: 180px;
+  width: 48%;
+}
+
+#call-us {
+  height: 180px;
+  width: 48%;
+}
+
+#contact-details {
+  height: 380px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+#our-address,
+#contact-details,
+#call-us,
+#email-us {
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 3%;
+}
+
+#our-address,
+#call-us,
+#email-us {
+  align-items: center;
+}
+
+#grid-part1a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-line1 {
+  display: flex;
+  gap: 2%;
+}
+
+#contact-details {
+  padding: 5%;
+}
+
+#contact-details input {
+  padding: 1%;
+  height: 36px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+  margin-bottom: 2%;
+}
+
+textarea {
+  height: 120px;
+  width: 100%;
+  padding: 1%;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+}
+
+/* textarea:active{
+ border: 1px solid orangered;
+} */
+
+#send-button {
+  color: white;
+  font-size: 1rem;
+  margin: 0% auto;
+  margin-top: 2% ;
+  padding: 2.5% 5%;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-Gradient(to right,  #ff6f51, #ff8d41, #ffaa37, #fcc737)
+}
+
+#grid-part1 img {
+  height: 35px;
+  width: 35px;
+}
+
+.heading-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #777777;
+}
+
+.success-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ed502e;
+}
+.error-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f80404;
+}
+
+.main-text {
+  color: #ed502e;
+  font-size: 14px;
+}
+
+#email-us div,
+#our-address div,
+#call-us div {
+  height: 50px;
+  width: 50px;
+  outline-offset: 3px;
+  outline-style: dotted;
+  outline-width: 2px;
+  outline-color: #ed512e71;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  #contactus-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  #grid-part1,
+  #grid-part2 {
+    width: 100%;
+  }
+
+  #grid-part1a {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #email-us,
+  #call-us {
+    width: 100%;
+  }
+
+  #contact-details input {
+    padding: 1% 3%;
+  }
+
+  textarea {
+    padding: 3%;
+  }
+}

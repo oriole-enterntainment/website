@@ -1,0 +1,210 @@
+.galleryBox {
+    margin-left: auto;
+    padding-bottom: 2%;
+}
+
+.gradient {
+    background: linear-gradient(to left, #FF4500, #FFA500,  #FF4500);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* title */
+
+.title {
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: -0.02em;
+    line-height: 60px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 28%;
+    padding: 0 4px;
+    /* border: 2px green solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column img {
+    margin: 8px 3px 0px 3px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 20px;
+}
+
+.column img:hover {
+    opacity: 70%;
+    border-radius: 0px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.column:nth-child(2) img:nth-child(1) {
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: -0.02em;
+        line-height: 60px;
+    }
+
+    .column img {
+        margin: -5px 0px;
+        transform: scale(.9);
+    }
+
+    #box1 {
+        margin: 20px 0px 10px 20px !important;
+    }
+
+    .row {
+        margin-top: 17px;
+    }
+}
+.galleryBox {
+    margin-left: auto;
+    padding-bottom: 2%;
+}
+
+
+
+/* title */
+.title {
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: -0.02em;
+    line-height: 60px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 28%;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.column img {
+    margin: 8px 3px 0px 3px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 20px;
+}
+
+.column img:hover {
+    opacity: 70%;
+    border-radius: 0px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.column:nth-child(2) img:nth-child(1) {
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: -0.02em;
+        line-height: 60px;
+    }
+
+    .column img {
+        margin: -5px 0px;
+        transform: scale(.9);
+    }
+
+    #box1 {
+        margin: 20px 0px 10px 20px !important;
+    }
+
+    .row {
+        margin-top: 17px;
+    }
+}
+
+
+/* Animation classes */
+.animate-left {
+    transform: translateX(-50px);
+}
+
+.animate-right {
+    transform: translateX(50px);
+}
+
+.animate-bottom {
+    transform: translateY(50px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.visible.animate-bottom {
+    transform: translateY(0);
+}

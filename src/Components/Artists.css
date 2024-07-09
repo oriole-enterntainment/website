@@ -1,0 +1,97 @@
+* {
+    transition: .3s ease;
+}
+
+.ArtistsBox {
+    margin-left: auto;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #8d00fd, #e70d8c, #ed4d6b, #f6a44c);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: -0.02em;
+    line-height: 60px;
+}
+
+.ArtistsGallery {
+    display: grid;
+    grid-template-columns: 27% 27% 27%;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.artist {
+    position: relative;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.artist img {
+    width: 100%;
+}
+
+.artistDetails {
+    position: absolute;
+    box-shadow: rgba(29, 29, 31, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(207, 229, 230, 0.8);
+    font-size: 23px;
+    transition: bottom 1s ease;
+    bottom: 5%;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.artist:hover .artistDetails {
+    bottom: 20%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#link {
+    color: orangered;
+    font-size: 30px;
+}
+
+#link:hover {
+    font-size: 30px;
+    color: purple;
+    transform: rotate(-30deg);
+}
+
+@media screen and (max-width: 800px) {
+    .ArtistsGallery {
+        grid-template-columns: 43% 43%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: -0.02em;
+        line-height: 60px;
+    }
+
+    #box1 {
+        margin: 10px 0px 10px 20px !important;
+    }
+
+    #box2 p {
+        font-size: 13px;
+    }
+
+    #line {
+        width: 80px !important;
+    }
+}

@@ -1,0 +1,322 @@
+* {
+  transition: 0.3s ease;
+}
+
+.TeamBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #8d00fd, #e70d8c, #ed4d6b, #f6a44c);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 1px;
+  line-height: 60px;
+}
+
+.TeamGallery1 {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.TeamGallery2 {
+  margin: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+}
+.team-photo {
+  width: 100%;
+  height: 250px;
+}
+.TeamGallery1 .team {
+  position: relative;
+  width: 40%;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.TeamGallery2 .team {
+  margin: 2px;
+  position: relative;
+  width: 20%;
+  overflow: hidden;
+}
+
+.TeamGallery1 img {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+}
+
+.TeamGallery2 img {
+  /* margin: ; */
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.detail1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(51, 51, 71, 0.5);
+  width: 10%;
+  padding: 10px;
+  position: absolute;
+  transition: left 0.3s ease;
+  left: -5%;
+  opacity: 0;
+  z-index: 10;
+}
+
+.detail2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1px;
+  padding-bottom: 25%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0),
+    rgba(51, 51, 71, 0.7)
+  );
+  font-weight: 600;
+  transition: bottom 0.3s ease;
+  bottom: 5%;
+  opacity: 0;
+}
+
+.team:hover .detail2 {
+  bottom: 20%;
+  opacity: 1;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+}
+
+.team:hover .detail1 {
+  opacity: 1;
+  top: 2%;
+  left: 0%;
+}
+
+.detail3 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(51, 51, 71, 0.5);
+  width: 20%;
+  padding: 10px;
+  position: absolute;
+  transition: left 0.3s ease;
+  left: -5%;
+  opacity: 0;
+  z-index: 10;
+}
+
+.detail4 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding: 5px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0),
+    rgba(51, 51, 71, 0.7)
+  );
+  font-weight: 600;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.team:hover .detail4 {
+  bottom: 9%;
+  opacity: 1;
+  top: 0%;
+  right: 0%;
+  /* bottom: 3.5%; */
+}
+
+.team:hover .detail3 {
+  opacity: 1;
+  top: 0%;
+  left: 0%;
+}
+
+#role1 {
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: 100;
+}
+
+#role2 {
+  font-size: 13px;
+  text-decoration: underline;
+  font-weight: 100;
+}
+
+#links1 {
+  font-size: 25px;
+  color: white;
+  margin: 6px 0px;
+  cursor: pointer;
+}
+
+#links2 {
+  font-size: 20px;
+  color: white;
+  margin: 3px 0px;
+  cursor: pointer;
+}
+
+#links1 :hover,
+#links2 :hover {
+  color: orangered;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    line-height: 60px;
+  }
+
+  #box2 p {
+    font-size: 13px;
+  }
+
+  #line {
+    width: 80px !important;
+  }
+
+  .TeamGallery1 {
+    width: 90%;
+    padding: 15px 0px;
+  }
+
+  .TeamGallery2 {
+    width: 90%;
+    padding: 20px 0px;
+  }
+
+  /* .TeamGallery2 .team {
+    width: 45%;
+    margin: 20px 0px;
+  } */
+
+  #box1 {
+    width: 90% !important;
+    margin: 15px 0px;
+  }
+
+  .detail1 {
+    width: 20%;
+  }
+
+  .detail2 {
+    width: 80%;
+    font-size: 15px;
+  }
+
+  #role1 {
+    font-size: 13px;
+  }
+
+  #links1 {
+    font-size: 20px;
+    color: white;
+    margin: 3px 0px;
+    cursor: pointer;
+  }
+  .team-photo {
+    width: 100%;
+    height: 150px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  #box2 p {
+    font-size: 12px;
+  }
+
+  #box1 {
+    width: 92% !important;
+    margin: 20px 0px 10px 10px !important;
+  }
+
+  .TeamGallery1 {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0px;
+  }
+  .TeamGallery1 .team {
+    position: relative;
+    width: 45%;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  .TeamGallery2 {
+    width: 92%;
+    padding: 0px 0px;
+  }
+
+  .TeamGallery2 .team {
+    width: 45%;
+    margin: 10px 0px;
+  }
+
+  .detail2 {
+    font-size: 13px;
+  }
+
+  .detail4 {
+    font-size: 13px;
+  }
+
+  #role1,
+  #role2 {
+    font-size: 11px;
+  }
+
+  #links1,
+  #links2 {
+    font-size: 18px;
+  }
+}
