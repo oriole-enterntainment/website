@@ -19,18 +19,18 @@ const Footer = () => {
             <p>
               <i>India's Biggest Live Stand Up Comedy Producers</i>
             </p>
-            <p>B4/201, Safdarjung Enclave, Delhi,India 110029 </p>
+            <p>First Floor, M3M URBANA, above Briyani Blues, R2- 104, Sector 67, Gurugram, Haryana 122101</p>
             <p>
               <b>Phone: </b>+91 078301 00001
             </p>
             <p>
               <b>Email: </b>team@orioleentertainment.com
             </p>
-            <div className="fb-insta-icons"><a href="#">
+            <div className="fb-insta-icons"><a href="https://www.instagram.com/orioleentertainment/" target="_blank">
               <img src={facebookicon} alt="facebookicon" />
             </a>
 
-            <a href="/">
+            <a href="https://www.instagram.com/orioleentertainment/" target="_blank">
               <img src={instagramicon} alt="instaicon" />
             </a></div>
           </div>
@@ -43,10 +43,10 @@ const Footer = () => {
              <img src={rightchevron} alt="rightarrow" /> <a href="/">Home </a>
             </li>
             <li>
-              <img src={rightchevron} alt="rightarrow" /> <a href="#about-us">About us </a>
+              <img src={rightchevron} alt="rightarrow" /> <a href="/">About us </a>
             </li>
             <li>
-              <img src={rightchevron} alt="rightarrow" /> <a href="/team">Team </a>
+              <img src={rightchevron} alt="rightarrow" /> <a href="/teams">Team </a>
             </li>
             <li>
               <img src={rightchevron} alt="rightarrow" /> <a href="/">Terms of service </a>

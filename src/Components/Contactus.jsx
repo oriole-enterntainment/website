@@ -85,7 +85,7 @@ const Contactus =  () => {
           <div id="our-address">
             <div><img src={phoneicon} alt="phone-icon" /></div>
             <p className="heading-text">Our Address</p>
-            <p>B4/201, Safdarjung Enclave, Delhi, India-110029</p>
+            <p>First Floor, M3M URBANA, above Briyani Blues, R2- 104, Sector 67, Gurugram, Haryana 122101</p>
           </div>
           <div id="grid-part1a">
             <div id="email-us">
@@ -117,6 +117,7 @@ const Contactus =  () => {
               setMessage(e.target.value)
             }} /></div>
             <button id="send-button" onClick={(e) => {handleSubmit(e)}}>Send Message</button>
+            {/* <a id="send-button" href={`mailto:mittalarc2001@gmail.com?subject=${subject}&body=${message}`}>Send Message</a> */}
             {loading && (<p className="success-text">Loading...</p>)}
             {error && (<p className="error-text">{error}</p>)}
           </div>

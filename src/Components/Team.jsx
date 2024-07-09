@@ -23,17 +23,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Team = () => {
   const data = [
     { photo: img3, name: "Aashish Singh", role: "Manager ( Oriole Partnerships )" },
-    { photo: img4, name: "Adnan Khan", role: "Event Programmer" },
-    { photo: img5, name: "Gourav Rao", role: "Artist Manager" },
-    { photo: img6, name: "Manav Singh", role: "Artist Manager" },
-    { photo: img7, name: "Manish Tyagi", role: "Associate ( Oriole Partnerships)" },
-    { photo: img8, name: "Navneet Kumar", role: "Assistant Manager ( Oriole Partnerships )" },
+    { photo: img13, name: "Nitin Singh", role: "Artist Manager" },
+    { photo: img12, name: "Nabeel Nawaz", role: "Artist Manager" },
+    { photo: img14, name: "Saksham Mishra ", role: "Artist Manager" },
+    { photo: img11, name: "Yash Tiwari", role: "Artist Manager" },
     { photo: img9, name: "Somya Supreet", role: "Artist Manager" },
     { photo: img10, name: "Yash Bharadwaj", role: "Artist Manager" },
-    { photo: img11, name: "Yash Tiwari", role: "Artist Manager" },
-    { photo: img12, name: "Nabeel Nawaz", role: "Artist Manager" },
-    { photo: img13, name: "Nitin Singh", role: "Artist Manager" },
-    { photo: img14, name: "Shaksham Mishra ", role: "Artist Manager" },
+    { photo: img8, name: "Navneet Kumar", role: "Assistant Manager ( Oriole Partnerships )" },
+    { photo: img4, name: "Adnan Khan", role: "Event Programmer" },
+    { photo: img6, name: "Manav Singh", role: "Artist Manager" },
+    { photo: img5, name: "Gourav Rao", role: "Artist Manager" },
+    { photo: img7, name: "Manish Tyagi", role: "Associate ( Oriole Partnerships)" },
   ];
 
   return (
