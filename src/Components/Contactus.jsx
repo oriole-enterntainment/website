@@ -91,8 +91,8 @@ const Contactus =  () => {
             <div id="email-us">
               <div><img src={mailicon} alt="mail-icon" /></div>
               <p className="heading-text">Email Us</p>
-              <p className="main-text">team@orioleentertainment.com</p>
-              <p className="main-text">orioleentertainment@gmail.com</p>
+              <p className="main-text"><a className="main-text" href="mailto:team@orioleentertainment.com">team@orioleentertainment.com</a></p>
+              <p className="main-text"><a className="main-text" href="mailto:orioleentertainment@gmail.com">orioleentertainment@gmail.com</a></p>
             </div>
             <div id="call-us">
               <div><img src={locationicon} alt="phone-icon" /></div>
