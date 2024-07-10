@@ -16,7 +16,11 @@ import img12 from '../../Assets/Gallery/img11.JPG'
 import img13 from '../../Assets/Gallery/img12.JPG'
 import img14 from '../../Assets/Gallery/img13.JPG'
 import img15 from '../../Assets/Gallery/img14.JPG'
-
+import img25 from '../../Assets/portfolio/27.JPG';
+import img26 from '../../Assets/portfolio/28.png';
+import img24 from '../../Assets/portfolio/26.JPG';
+import img36 from '../../Assets/portfolio/38.png';
+import rahul_dua from '../../Assets/portfolio/5.png';
 
 const Gallery = () => {
     const box1Ref = useRef(null);
@@ -68,19 +72,19 @@ const Gallery = () => {
                 <div className="column animate-left" ref={el => columnRefs.current[0] = el}>
                     <img src={img5} alt="Gallery Image 1" />
                     <img src={img14} alt="Gallery Image 2" />
-                    <img src={img13} alt="Gallery Image 3" />
-                    <img src={img12} alt="Gallery Image 4" />
+                    <img src={img36} alt="Gallery Image 3" />
+                    <img src={rahul_dua} alt="Gallery Image 4" />
                 </div>
                 <div className="column" ref={el => columnRefs.current[1] = el}>
                     <img src={img10} alt="Gallery Image 5" style={{ width: "65%" }} />
-                    <img src={img15} alt="Gallery Image 6" />
+                    <img src={img25} alt="Gallery Image 6" />
                     <img src={img2} alt="Gallery Image 7" />
                 </div>
                 <div className="column animate-right" ref={el => columnRefs.current[2] = el}>
                     <img src={img8} alt="Gallery Image 8" />
                     <img src={img4} alt="Gallery Image 9" />
-                    <img src={img1} alt="Gallery Image 10" />
-                    <img src={img11} alt="Gallery Image 11" />
+                    <img src={img24} alt="Gallery Image 10" />
+                    <img src={img26} alt="Gallery Image 11" />
                 </div>
             </div>
         </Grid>
