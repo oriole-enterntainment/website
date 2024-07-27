@@ -15,6 +15,7 @@ import img11 from "../Assets/team/Yash Tiwari.jpg";
 import img12 from "../Assets/team/Nabeel.jpg";
 import img13 from "../Assets/team/Nitin Singh.jpg";
 import img14 from "../Assets/team/Shaksham Mishra .PNG";
+import img15 from "../Assets/team/naresh.jpg";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -22,6 +23,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Team = () => {
   const data = [
+    { photo: img15, name: "Naresh Kumar", role: "Manager" },
     { photo: img3, name: "Aashish Singh", role: "Manager ( Oriole Partnerships )" },
     { photo: img13, name: "Nitin Singh", role: "Artist Manager" },
     { photo: img12, name: "Nabeel Nawaz", role: "Artist Manager" },
