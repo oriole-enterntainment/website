@@ -38,12 +38,14 @@ const Contactus =  () => {
         setLoading(false);
         return;
       } else {
-        const documentName = generateRandomString(10)
+        const documentName = 'contact_'+generateRandomString(10)
         await setDoc(doc(db, "contactus",documentName), {
          name: name,
          email: email,
          subject: subject,
          message: message,
+         isResolved : false,
+         contactId : documentName,
          sent_at : Timestamp.now()
        }).then((result) => {
          
