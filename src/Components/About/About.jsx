@@ -48,13 +48,8 @@ const About = () => {
             className={styles.desc}
             style={{ letterSpacing: "2px", fontWeight: "200" }}
           >
-            Oriole Entertainment is the pioneer of the Tier 2 and Tier 3 city
-            comedy shows. We have been dedicated to making people laugh since
-            2017 and plan to do it for the rest of our lives! We’re most
-            popularly known as the house of Anubhav Singh Bassi and Harsh
-            Gujral. Our shows have made people chuckle in cities like Agra,
-            Gurugram, Lucknow, Kanpur, Dehradun and many more! Oriole
-            Entertainment Pvt Ltd was founded by Ankur Bhargava.
+            <p><strong>Oriole Entertainment Pvt Ltd</strong> has been a trailblazer in bringing comedy shows to Tier 2 and Tier 3 cities since 2017. As the home of renowned comedians like <strong>Anubhav Singh Bassi</strong> and <strong>Harsh Gujral</strong>, we have been dedicated to spreading laughter across cities such as <strong>Agra, Gurugram, Lucknow, Kanpur, Dehradun</strong>, and many more. Founded by <strong>Ankur Bhargava</strong>, our mission is to continue making people laugh for years to come.</p>
+
           </p>
 
           <div className={styles.desktopcards}>
@@ -76,8 +71,8 @@ const About = () => {
                 </div>
                 <h3 className={styles.cardTitle}>
                   {animateCount && (
-                    <CountUp end={500000} duration={5} separator="," />
-                  )}
+                    <CountUp end={702400} duration={5} separator="," suffix="+" />
+                  )} 
                 </h3>
                 <p>Number of Tickets sold successfully to the customers.</p>
               </div>
@@ -99,7 +94,7 @@ const About = () => {
                   ></BusinessOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={75} duration={5} />}
+                  {animateCount && <CountUp end={105} duration={5} suffix="+" />} 
                 </h3>
                 <p>
                   Presenting shows organized in the number of cities on-site.
@@ -124,9 +119,9 @@ const About = () => {
                   ></MicExternalOnOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={65} duration={5} suffix="+" />}
+                  {animateCount && <CountUp end={70} duration={5} suffix="+" />}
                 </h3>
-                <p>Collaborated with over 65 artists in our endeavors.</p>
+                <p>Collaborated with over 70 artists in our endeavors.</p>
               </div>
             </div>
             <div
@@ -146,7 +141,7 @@ const About = () => {
                   ></InterpreterModeOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={2500} duration={5} />}
+                  {animateCount && <CountUp end={4000} duration={5} suffix="+"/>}
                 </h3>
                 <p>
                   Executed events in multiple cities, showcasing diverse shows

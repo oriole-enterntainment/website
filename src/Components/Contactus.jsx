@@ -13,6 +13,7 @@ const Contactus =  () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
+  const [phone, setPhone] = useState('')
 
   const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
@@ -46,6 +47,7 @@ const Contactus =  () => {
          message: message,
          isResolved : false,
          contactId : documentName,
+         phone : phone,
          sent_at : Timestamp.now()
        }).then((result) => {
          
@@ -112,6 +114,9 @@ const Contactus =  () => {
               <input type="text" placeholder="Your Email" value={email} onChange={(e) => {
                 setEmail(e.target.value)
               }} /></div>
+              <input type="number" placeholder="Your Phone Number" value={phone} onChange={(e) => {
+                setPhone(e.target.value)
+              }} />
             <div><input type="text" placeholder="Subject" value={subject} onChange={(e) => {
               setSubject(e.target.value)
             }} /></div>

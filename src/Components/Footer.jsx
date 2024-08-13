@@ -57,7 +57,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footersection3">
+        {/* <div className="footersection3">
           <p>Our Newsletter</p>
           <br />
           <p>Never miss an event from your favorite comedians! </p>
@@ -66,7 +66,7 @@ const Footer = () => {
           <p className="sub-button">
             <button className="sub-buttonstyle">Subscribe</button>
           </p>
-        </div>
+        </div> */}
       </div>
 
       <div className="footer-end">

@@ -90,7 +90,7 @@ const Navbar = () => {
               </Link>
               <Link to="/teams">
                 <a href="#" onClick={hideFront}>
-                  Teams
+                  Team
                 </a>
               </Link>
               {/* <div id='submenu'>
