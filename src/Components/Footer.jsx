@@ -21,10 +21,10 @@ const Footer = () => {
             </p>
             <p>First Floor, M3M URBANA, above Briyani Blues, R2- 104, Sector 67, Gurugram, Haryana 122101</p>
             <p>
-              <b>Phone: </b>+91 078301 00001
+              <b>Phone: </b>+91 078301 00001, +91 9999671773 
             </p>
             <p>
-              <b>Email: </b>team@orioleentertainment.com
+              <b>Email: </b>team@orioleentertainment.com brands@orioleentertainment.com 
             </p>
             <div className="fb-insta-icons"><a href="https://www.instagram.com/orioleentertainment/" target="_blank">
               <img src={facebookicon} alt="facebookicon" />
