@@ -74,7 +74,7 @@ const About = () => {
                     <CountUp end={1000000} duration={5} separator="," suffix="+" />
                   )} 
                 </h3>
-                <p>Number of Tickets sold successfully to the customers.</p>
+                <p>1 Mn+ Tickets sold and counting</p>
               </div>
             </div>
             <div
@@ -97,10 +97,11 @@ const About = () => {
                   {animateCount && <CountUp end={7000} duration={5} suffix="+" />} 
                 </h3>
                 <p>
-                  Presenting shows organized in the number of cities on-site.
+                  7,000+ shows brought to life across cities
                 </p>
               </div>
             </div>
+            
             <div
               className={clsx(styles.card, styles.nftWithPerks)}
               data-aos="fade-up"
@@ -121,7 +122,7 @@ const About = () => {
                 <h3 className={styles.cardTitle}>
                   {animateCount && <CountUp end={75} duration={5} suffix="+" />}
                 </h3>
-                <p>Collaborated with over 75+ artists in our endeavors.</p>
+                <p>75+ Artists in collaboration during our journey</p>
               </div>
             </div>
             <div
