@@ -97,7 +97,7 @@ const About = () => {
                   {animateCount && <CountUp end={7000} duration={5} suffix="+" />}
                 </h3>
                 <p>
-                  shows brought to life across cities
+                  Shows brought to life across cities
                 </p>
               </div>
             </div>
