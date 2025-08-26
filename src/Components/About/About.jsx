@@ -72,7 +72,7 @@ const About = () => {
                 <h3 className={styles.cardTitle}>
                   {animateCount && (
                     <CountUp end={1000000} duration={5} separator="," suffix="+" />
-                  )} 
+                  )}
                 </h3>
                 <p>1 Mn+ Tickets sold and counting</p>
               </div>
@@ -94,14 +94,39 @@ const About = () => {
                   ></BusinessOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={7000} duration={5} suffix="+" />} 
+                  {animateCount && <CountUp end={7000} duration={5} suffix="+" />}
                 </h3>
                 <p>
                   7,000+ shows brought to life across cities
                 </p>
               </div>
             </div>
-            
+
+
+            <div
+              className={clsx(styles.card, styles.cities)}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className={styles.cardInside}>
+                <div className={styles.imgDiv}>
+                  <BusinessOutlinedIcon
+                    className={styles.icons}
+                    style={{
+                      color: "indianred",
+                      margin: "15px",
+                      fontSize: "60px",
+                    }}
+                  ></BusinessOutlinedIcon>
+                </div>
+                <h3 className={styles.cardTitle}>
+                  {animateCount && <CountUp end={100} duration={5} suffix="+" />}
+                </h3>
+                <p>
+                  100+ Cities covered nationwide
+                </p>
+              </div>
+            </div>
             <div
               className={clsx(styles.card, styles.nftWithPerks)}
               data-aos="fade-up"
@@ -142,7 +167,7 @@ const About = () => {
                   ></InterpreterModeOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={4000} duration={5} suffix="+"/>}
+                  {animateCount && <CountUp end={4000} duration={5} suffix="+" />}
                 </h3>
                 <p>
                   Executed events in multiple cities, showcasing diverse shows

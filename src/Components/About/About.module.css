@@ -65,14 +65,19 @@
     left: 45%;
 }
 
+.cities {
+  right:-270px;      /* was -270px */
+  top: 100%;
+}
+
 .nftWithPerks {
     right: -270px;
-    top: 5%;
+    top: 2%;
 }
 
 .membership {
     right: -270px;
-    top: 60%;
+    top: 50%;
 }
 
 .card h3 {
