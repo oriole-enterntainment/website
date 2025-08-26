@@ -74,7 +74,7 @@ const About = () => {
                     <CountUp end={1000000} duration={5} separator="," suffix="+" />
                   )}
                 </h3>
-                <p>1 Mn+ Tickets sold and counting</p>
+                <p>Tickets sold and counting</p>
               </div>
             </div>
             <div
@@ -97,7 +97,7 @@ const About = () => {
                   {animateCount && <CountUp end={7000} duration={5} suffix="+" />}
                 </h3>
                 <p>
-                  7,000+ shows brought to life across cities
+                  shows brought to life across cities
                 </p>
               </div>
             </div>
@@ -123,7 +123,7 @@ const About = () => {
                   {animateCount && <CountUp end={100} duration={5} suffix="+" />}
                 </h3>
                 <p>
-                  100+ Cities covered nationwide
+                  Cities covered nationwide
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ const About = () => {
                 <h3 className={styles.cardTitle}>
                   {animateCount && <CountUp end={75} duration={5} suffix="+" />}
                 </h3>
-                <p>75+ Artists in collaboration during our journey</p>
+                <p>Artists in collaboration during our journey</p>
               </div>
             </div>
             <div
