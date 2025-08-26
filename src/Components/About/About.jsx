@@ -71,7 +71,7 @@ const About = () => {
                 </div>
                 <h3 className={styles.cardTitle}>
                   {animateCount && (
-                    <CountUp end={702400} duration={5} separator="," suffix="+" />
+                    <CountUp end={1000000} duration={5} separator="," suffix="+" />
                   )} 
                 </h3>
                 <p>Number of Tickets sold successfully to the customers.</p>
@@ -94,7 +94,7 @@ const About = () => {
                   ></BusinessOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={105} duration={5} suffix="+" />} 
+                  {animateCount && <CountUp end={7000} duration={5} suffix="+" />} 
                 </h3>
                 <p>
                   Presenting shows organized in the number of cities on-site.
@@ -119,9 +119,9 @@ const About = () => {
                   ></MicExternalOnOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={70} duration={5} suffix="+" />}
+                  {animateCount && <CountUp end={75} duration={5} suffix="+" />}
                 </h3>
-                <p>Collaborated with over 70 artists in our endeavors.</p>
+                <p>Collaborated with over 75+ artists in our endeavors.</p>
               </div>
             </div>
             <div
