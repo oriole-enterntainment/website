@@ -24,7 +24,7 @@ const Team = () => {
   const data = [
     { photo: img15, name: "Naresh Kumar", role: "Manager" },
     { photo: img3, name: "Aashish Singh", role: "Manager ( Oriole Partnerships )" },
-    { photo: img12, name: "Ajay Kumar", role: "Manager" },
+    { photo: img12, name: "Ajay Kumar", role: "Manager - Ground Operations" },
     { photo: img13, name: "Nitin Singh", role: "Artist Manager" },
     { photo: img14, name: "Saksham Mishra ", role: "Artist Manager" },
     { photo: img11, name: "Yash Tiwari", role: "Artist Manager" },
