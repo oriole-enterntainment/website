@@ -1,21 +1,20 @@
 import React from "react";
-import { Grid } from "@mui/material";
 import "./Team.css";
 import img1 from "../Assets/team/team-1.png";
 import img2 from "../Assets/team/team-2.png";
 import img3 from "../Assets/team/Aashish.PNG";
 import img4 from "../Assets/team/Adnan Khan.jpg";
 import img5 from "../Assets/team/Gourav Rao.jpg";
-import img6 from "../Assets/team/Manav.jpg";
 import img7 from "../Assets/team/Manish Tyagi.jpg";
-import img8 from "../Assets/team/Navneet Kumar.jpg";
-import img9 from "../Assets/team/Somya.jpg";
 import img10 from "../Assets/team/Yash Bharadwaj.jpg";
 import img11 from "../Assets/team/Yash Tiwari.jpg";
-import img12 from "../Assets/team/Nabeel.jpg";
 import img13 from "../Assets/team/Nitin Singh.jpg";
 import img14 from "../Assets/team/Shaksham Mishra .PNG";
 import img15 from "../Assets/team/naresh_new.jpg";
+import img6 from "../Assets/team/Manas_Dubey.jpg";
+import img8 from "../Assets/team/Aman_Swaroop.jpg";
+import img9 from "../Assets/team/Sarthak Garg.jpg";
+import img12 from "../Assets/team/Ajay Kumar.jpg";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -25,14 +24,18 @@ const Team = () => {
   const data = [
     { photo: img15, name: "Naresh Kumar", role: "Manager" },
     { photo: img3, name: "Aashish Singh", role: "Manager ( Oriole Partnerships )" },
+    { photo: img12, name: "Ajay Kumar", role: "Manager" },
     { photo: img13, name: "Nitin Singh", role: "Artist Manager" },
     { photo: img14, name: "Saksham Mishra ", role: "Artist Manager" },
     { photo: img11, name: "Yash Tiwari", role: "Artist Manager" },
-    { photo: img9, name: "Somya Supreet", role: "Artist Manager" },
     { photo: img10, name: "Yash Bharadwaj", role: "Artist Manager" },
     { photo: img4, name: "Adnan Khan", role: "Event Programmer" },
     { photo: img5, name: "Gourav Rao", role: "Artist Manager" },
     { photo: img7, name: "Manish Tyagi", role: "Associate ( Oriole Partnerships)" },
+    { photo: img9, name: "Sarthak Garg", role: "Associate, Marketing and Partnership" },
+    { photo: img8, name: "Aman Swaroop", role: "Artist Manager" },
+    { photo: img6, name: "Manas Dubey", role: "Artist Manager" },
+
   ];
 
   return (
