@@ -1,7 +1,7 @@
 import React from 'react';
 import './Booking.css'
 import { Link } from 'react-router-dom';
-import event from '../../src/Assets/Event.png'
+import event from '../Assets/Event.png'
 
 const Booking = () => {
     return (
@@ -30,7 +30,7 @@ const Booking = () => {
                 </div>
             </div>
 
-            <p style={{ fontSize: '20px', margin: '25px 0px' }} >Past Events by Oriole Entertaintment</p>
+            <p style={{ fontSize: '20px', margin: '25px 0px' }} >Past Events by Oriole Entertainment</p>
 
             <div className="pastEvents">
                 <div className="event">

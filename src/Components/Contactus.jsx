@@ -3,8 +3,8 @@ import "./Contactus.css";
 import phoneicon from './icons/phone-icon.svg';
 import mailicon from './icons/mail-icon.svg';
 import locationicon from './icons/location-icon.svg';
-import { getFirestore,setDoc, doc, Timestamp } from "firebase/firestore";
-import { app ,db } from '../firebase/firebaseConfig'
+import { setDoc, doc, Timestamp } from "firebase/firestore";
+import { db } from '../firebase/firebaseConfig'
 
 
 const Contactus =  () => {

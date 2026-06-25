@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./About.module.css";
 import clsx from "clsx";
 import AOS from "aos";
@@ -11,6 +11,7 @@ import InterpreterModeOutlinedIcon from "@mui/icons-material/InterpreterModeOutl
 
 const About = () => {
   const [animateCount, setAnimateCount] = useState(false);
+  const animateCountRef = useRef(false);
 
   useEffect(() => {
     AOS.init({
@@ -28,10 +29,11 @@ const About = () => {
 
   const handleScroll = () => {
     const aboutSection = document.getElementById("aboutus");
-    if (aboutSection && !animateCount) {
+    if (aboutSection && !animateCountRef.current) {
       const top = aboutSection.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
       if (top < windowHeight * 0.75) {
+        animateCountRef.current = true;
         setAnimateCount(true);
       }
     }
@@ -48,8 +50,7 @@ const About = () => {
             className={styles.desc}
             style={{ letterSpacing: "2px", fontWeight: "200" }}
           >
-            <p><strong>Oriole Entertainment Pvt Ltd</strong> has been a trailblazer in bringing comedy shows to Tier 2 and Tier 3 cities since 2017. As the home of renowned comedians like <strong>Anubhav Singh Bassi</strong> and <strong>Harsh Gujral</strong>, we have been dedicated to spreading laughter across cities such as <strong>Agra, Gurugram, Lucknow, Kanpur, Dehradun</strong>, and many more. Founded by <strong>Ankur Bhargava</strong>, our mission is to continue making people laugh for years to come.</p>
-
+            <strong>Oriole Entertainment Pvt Ltd</strong> has been a trailblazer in bringing comedy shows to Tier 2 and Tier 3 cities since 2017. As the home of renowned comedians like <strong>Anubhav Singh Bassi</strong> and <strong>Harsh Gujral</strong>, we have been dedicated to spreading laughter across cities such as <strong>Agra, Gurugram, Lucknow, Kanpur, Dehradun</strong>, and many more. Founded by <strong>Ankur Bhargava</strong>, our mission is to continue making people laugh for years to come.
           </p>
 
           <div className={styles.desktopcards}>

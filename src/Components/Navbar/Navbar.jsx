@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const handleTeam = () => {
     navigate("/teams");
-    setOpenMenu(!openMenu);
+    setOpenMenu(false);
     setFront(false);
   };
 
@@ -62,37 +62,25 @@ const Navbar = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <div id="navbarLinks">
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Link to="/">
-                <a href="#" onClick={showFront}>
-                  Home
-                </a>
-              </Link>
+              <Link to="/" onClick={showFront}>Home</Link>
               {front && (
                 <>
                   <ScrollLink to="aboutus" smooth={true} duration={1000}>
-                    <a href="#aboutus">About</a>
+                    About
                   </ScrollLink>
                   <ScrollLink to="box1" smooth={true} duration={1000}>
-                    <a href="#box1">Gallery</a>
+                    Gallery
                   </ScrollLink>
                   <ScrollLink to="big-div" smooth={true} duration={1000}>
-                    <a href="#big-div">Testimonials</a>
+                    Testimonials
                   </ScrollLink>
                   <ScrollLink to="contactus" smooth={true} duration={1000}>
-                    <a href="#contactus">Contact</a>
+                    Contact
                   </ScrollLink>
                 </>
               )}
-              <Link to="/artists">
-                <a href="#" onClick={hideFront}>
-                  Artists
-                </a>
-              </Link>
-              <Link to="/teams">
-                <a href="#" onClick={hideFront}>
-                  Team
-                </a>
-              </Link>
+              <Link to="/artists" onClick={hideFront}>Artists</Link>
+              <Link to="/teams" onClick={hideFront}>Team</Link>
               {/* <div id='submenu'>
                                 <a style={{ display: 'flex', alignItems: 'center' }}>Others <KeyboardArrowDownIcon style={{ fontWeight: '10', marginLeft: '2px' }}></KeyboardArrowDownIcon></a>
                                 <ul id='submenuList'>
@@ -140,33 +128,25 @@ const Navbar = () => {
       </div>
 
       <div id="navbar2links" style={{ width: openMenu ? "100%" : "0%" }}>
-        <Link to="/">
-          <a href="#" onClick={showFront}>
-            Home
-          </a>
-        </Link>
+        <Link to="/" onClick={showFront}>Home</Link>
         {front && (
           <>
             <ScrollLink to="aboutus" smooth={true} duration={1000}>
-              <a href="#">About</a>
+              About
             </ScrollLink>
             <ScrollLink to="box1" smooth={true} duration={1000}>
-              <a href="#">Gallery</a>
+              Gallery
             </ScrollLink>
             <ScrollLink to="big-div" smooth={true} duration={1000}>
-              <a href="#">Testimonials</a>
+              Testimonials
             </ScrollLink>
             <ScrollLink to="contactus" smooth={true} duration={1000}>
-              <a href="#">Contact</a>
+              Contact
             </ScrollLink>
           </>
         )}
-        <Link to="/artists">
-          <a href="#" onClick={hideFront}>
-            Artists
-          </a>
-        </Link>
-        <a onClick={handleTeam}>Teams</a>
+        <Link to="/artists" onClick={hideFront}>Artists</Link>
+        <Link to="/teams" onClick={handleTeam}>Teams</Link>
       </div>
     </div>
   );

@@ -78,21 +78,21 @@ const Team = () => {
           <img src={img1} alt="" />
           <div className="detail1">
             <a href="#">
-              <TwitterIcon id="links1"></TwitterIcon>
+              <TwitterIcon className="links1"></TwitterIcon>
             </a>
             <a href="">
-              <InstagramIcon id="links1"></InstagramIcon>
+              <InstagramIcon className="links1"></InstagramIcon>
             </a>
             <a href="#">
-              <FacebookIcon id="links1"></FacebookIcon>
+              <FacebookIcon className="links1"></FacebookIcon>
             </a>
             <a href="#">
-              <LinkedInIcon id="links1"></LinkedInIcon>
+              <LinkedInIcon className="links1"></LinkedInIcon>
             </a>
           </div>
           <div className="detail2">
             <p>
-              Ankhur Bhargava <br /> <i id="role1"> Director </i>{" "}
+              Ankhur Bhargava <br /> <i className="role1"> Director </i>{" "}
             </p>
           </div>
         </div>
@@ -100,35 +100,35 @@ const Team = () => {
           <img src={img2} alt="" />
           <div className="detail1">
             <a href="#">
-              <TwitterIcon id="links1"></TwitterIcon>
+              <TwitterIcon className="links1"></TwitterIcon>
             </a>
             <a href="#">
-              <InstagramIcon id="links1"></InstagramIcon>
+              <InstagramIcon className="links1"></InstagramIcon>
             </a>
             <a href="#">
-              <FacebookIcon id="links1"></FacebookIcon>
+              <FacebookIcon className="links1"></FacebookIcon>
             </a>
             <a href="#">
-              <LinkedInIcon id="links1"></LinkedInIcon>
+              <LinkedInIcon className="links1"></LinkedInIcon>
             </a>
           </div>
           <div className="detail2">
             <p>
               Nupur Ankur <br /> Bhargava <br />{" "}
-              <i id="role1"> Joint Director </i>{" "}
+              <i className="role1"> Joint Director </i>{" "}
             </p>
           </div>
         </div>
       </div>
 
       <div className="TeamGallery2">
-        {data.map((object) => {
+        {data.map((object, index) => {
           return (
-            <div className="team">
+            <div key={index} className="team">
               <img className="team-photo" src={object.photo} alt="" />
               <div className="detail4">
                 <p>
-                  {object.name} <br /> <i id="role2"> {object.role} </i>{" "}
+                  {object.name} <br /> <i className="role2"> {object.role} </i>{" "}
                 </p>
               </div>
             </div>

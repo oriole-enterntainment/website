@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "./Slider_1.css";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { ScrollLink } from "react-scroll";
 
 const Slider_1 = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -74,13 +73,14 @@ const Slider_1 = () => {
               padding: "auto 30px",
             }}
           >
-            <Link
-              to="https://in.bookmyshow.com/events/oriole-entertainment-live/ET00316295"
+            <a
+              href="https://in.bookmyshow.com/events/oriole-entertainment-live/ET00316295"
               target="_blank"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "white" }}
             >
               Book Now
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

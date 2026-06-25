@@ -24,13 +24,13 @@ const Footer = () => {
               <b>Phone: </b>+91 078301 00001, +91 9999671773 
             </p>
             <p>
-              <b>Email: </b>info@orioleentertainment.com brands@orioleentertainment.com 
+              <b>Email: </b>info@orioleentertainment.com, brands@orioleentertainment.com
             </p>
-            <div className="fb-insta-icons"><a href="https://www.instagram.com/orioleentertainment/" target="_blank">
+            <div className="fb-insta-icons"><a href="#" rel="noopener noreferrer">
               <img src={facebookicon} alt="facebookicon" />
             </a>
 
-            <a href="https://www.instagram.com/orioleentertainment/" target="_blank">
+            <a href="https://www.instagram.com/orioleentertainment/" target="_blank" rel="noopener noreferrer">
               <img src={instagramicon} alt="instaicon" />
             </a></div>
           </div>
