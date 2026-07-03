@@ -15,6 +15,9 @@ import img6 from "../Assets/team/Manas Dubey.jpg";
 import img8 from "../Assets/team/Aman Swaroop.jpg";
 import img9 from "../Assets/team/Sarthak Garg.jpg";
 import img12 from "../Assets/team/Ajay Kumar.jpg";
+import img51 from "../Assets/team/animesh.jpeg";
+import img52 from "../Assets/team/yamini-khanna.png";
+import img53 from "../Assets/team/tushar-sharma.jpg";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -35,6 +38,9 @@ const Team = () => {
     { photo: img9, name: "Sarthak Garg", role: "Associate, Marketing and Partnership" },
     { photo: img8, name: "Aman Swaroop", role: "Artist Manager" },
     { photo: img6, name: "Manas Dubey", role: "Artist Manager" },
+    { photo: img51, name: "Animesh Singh", role: "Artist Manager" },
+    { photo: img52, name: "Yamini Khanna", role: "Head of Creatives" },
+    { photo: img53, name: "Tushar Sharma", role: "Artist Manager" },
 
   ];
 
