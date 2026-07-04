@@ -4,9 +4,6 @@ import img1 from "../Assets/team/team-1.png";
 import img2 from "../Assets/team/team-2.png";
 import img3 from "../Assets/team/Aashish.PNG";
 import img4 from "../Assets/team/Adnan Khan.jpg";
-import img5 from "../Assets/team/Gourav Rao.jpg";
-import img7 from "../Assets/team/Manish Tyagi.jpg";
-import img10 from "../Assets/team/Yash Bharadwaj.jpg";
 import img11 from "../Assets/team/Yash Tiwari.jpg";
 import img13 from "../Assets/team/Nitin Singh.jpg";
 import img14 from "../Assets/team/Shaksham Mishra .PNG";
@@ -31,10 +28,7 @@ const Team = () => {
     { photo: img13, name: "Nitin Singh", role: "Artist Manager" },
     { photo: img14, name: "Saksham Mishra ", role: "Artist Manager" },
     { photo: img11, name: "Yash Tiwari", role: "Artist Manager" },
-    { photo: img10, name: "Yash Bharadwaj", role: "Artist Manager" },
     { photo: img4, name: "Adnan Khan", role: "Event Programmer" },
-    { photo: img5, name: "Gourav Rao", role: "Artist Manager" },
-    { photo: img7, name: "Manish Tyagi", role: "Associate ( Oriole Partnerships)" },
     { photo: img9, name: "Sarthak Garg", role: "Associate, Marketing and Partnership" },
     { photo: img8, name: "Aman Swaroop", role: "Artist Manager" },
     { photo: img6, name: "Manas Dubey", role: "Artist Manager" },
