@@ -6,7 +6,7 @@ import img3 from "../Assets/team/Aashish.PNG";
 import img4 from "../Assets/team/Adnan Khan.jpg";
 import img11 from "../Assets/team/Yash Tiwari.jpg";
 import img13 from "../Assets/team/Nitin Singh.jpg";
-import img14 from "../Assets/team/Shaksham Mishra .PNG";
+import img14 from "../Assets/team/saksham-2.jpeg";
 import img15 from "../Assets/team/naresh_new.jpg";
 import img6 from "../Assets/team/Manas Dubey.jpg";
 import img8 from "../Assets/team/Aman Swaroop.jpg";
@@ -15,6 +15,7 @@ import img12 from "../Assets/team/Ajay Kumar.jpg";
 import img51 from "../Assets/team/animesh.jpeg";
 import img52 from "../Assets/team/yamini-khanna.png";
 import img53 from "../Assets/team/tushar-sharma.jpg";
+import img54 from "../Assets/team/sumit.jpeg";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -35,7 +36,7 @@ const Team = () => {
     { photo: img51, name: "Animesh Singh", role: "Artist Manager" },
     { photo: img52, name: "Yamini Khanna", role: "Head of Creatives" },
     { photo: img53, name: "Tushar Sharma", role: "Artist Manager" },
-
+    { photo: img54, name: "Sumit Jha", role: "Accountant" },
   ];
 
   return (
