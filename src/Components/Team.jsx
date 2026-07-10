@@ -40,7 +40,7 @@ const Team = () => {
     { photo: img53, name: "Tushar Sharma", role: "Artist Manager" },
     { photo: img54, name: "Sumit Jha", role: "Accountant" },
     { photo: img55, name: "Divya", role: "Marketing Associate" },
-    { photo: img56, name: "Sushant Yadav", role: "Brands & Partnerships" },
+    { photo: img56, name: "Shushant Yadav", role: "Brands & Partnerships" },
   ];
 
   return (
