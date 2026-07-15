@@ -12,7 +12,7 @@ import img6 from "../Assets/team/Manas Dubey.jpg";
 import img8 from "../Assets/team/amanswaroop.jpeg";
 import img9 from "../Assets/team/Sarthak Garg.jpg";
 import img12 from "../Assets/team/Ajay Kumar.jpg";
-import img51 from "../Assets/team/animesh.jpeg";
+import img51 from "../Assets/team/animeshh.jpeg";
 import img52 from "../Assets/team/yamini-khanna.png";
 import img53 from "../Assets/team/tushar-sharma.jpg";
 import img54 from "../Assets/team/sumit.jpeg";
