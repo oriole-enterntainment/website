@@ -1,62 +1,152 @@
+/* ===== Theme tokens: light gray + yellow ===== */
+.slideshow-container {
+  --slider-gray-light: #f4f4f1;
+  --slider-gray: #e2e1db;
+  --slider-gray-dark: #4a4a45;
+  --slider-yellow: #ffc107;
+  --slider-yellow-dark: #ffa000;
+  --slider-yellow-soft: #ffe08a;
+}
+
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
   margin-top: 12px;
+  height: 82vh;
+  max-height: 780px;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 14px;
+  background-color: var(--slider-gray-light);
+  border: 1px solid var(--slider-gray);
+  touch-action: pan-y; /* let vertical scroll pass through, horizontal is ours */
+  cursor: grab;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Slides */
+.slideshow-container:active {
+  cursor: grabbing;
+}
+
+/* Track holds all slides in a row; we translateX it to switch/swipe */
+.slides-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Slides — sharp, unblurred images; content vertically centered */
 .mySlides {
-  height: 70vh; /* Set a fixed height for the slides */
-  padding: 5% 2%;
-  margin-top: 5px;
-  border: 1px solid;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 0 2%;
   background-position: center;
   background-size: cover;
-  position: relative; /* Added position relative for inner text */
+  background-repeat: no-repeat;
+  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
-.mySlides::before {
-  content: "";
+
+/* Subtle glow border + slow zoom for featured slides (both BigLineup ones) */
+.mySlides-featured {
+  box-shadow: inset 0 0 0 3px rgba(255, 193, 7, 0.55);
+  animation: featuredZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes featuredZoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 112%;
+  }
+}
+
+.featured-ribbon {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit; /* Use the same background */
-  filter: blur(3px); /* Apply blur effect */
-  z-index: 0; /* Position behind the content */
-}
-#myslides1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../Assets/slide/banner1.avif") center / cover no-repeat;
+  top: 18px;
+  left: -42px;
+  transform: rotate(-40deg);
+  background: linear-gradient(
+    to right,
+    var(--slider-yellow-dark),
+    var(--slider-yellow)
+  );
+  color: #2b2b28;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 6px 50px;
+  z-index: 3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-#myslides2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../Assets/slide/img1.jpg") center / cover no-repeat;
-}
-
-#myslides3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../Assets/slide/img3.png") center / cover no-repeat;
+.slide-badge {
+  display: inline-block;
+  background: rgba(255, 193, 7, 0.18);
+  border: 1px solid rgba(255, 193, 7, 0.6);
+  color: var(--slider-yellow);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(4px);
 }
 
 .mySlidesText {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  color: white;
+  color: #ffffff;
   width: 95%;
-  margin-top: 3%;
   margin-left: 5%;
   position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Staggered entrance animation for the active slide's content */
+.mySlidesText.slide-in .slide-badge,
+.mySlidesText.slide-in h1,
+.mySlidesText.slide-in p,
+.mySlidesText.slide-in .cta-row,
+.mySlidesText.slide-in .slide-cta {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textRise 0.8s ease forwards;
+}
+
+.mySlidesText.slide-in .slide-badge {
+  animation-delay: 0.05s;
+}
+.mySlidesText.slide-in h1 {
+  animation-delay: 0.2s;
+}
+.mySlidesText.slide-in p {
+  animation-delay: 0.4s;
+}
+.mySlidesText.slide-in .cta-row,
+.mySlidesText.slide-in .slide-cta {
+  animation-delay: 0.6s;
+}
+
+@keyframes textRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mySlidesText h1 {
-  font-size: 50px;
+  font-size: 52px;
   line-height: 60px;
 }
 
@@ -65,114 +155,303 @@
   font-weight: 100;
   line-height: 25px;
   margin: 20px 0px;
+  max-width: 620px;
 }
 
-/* Next & previous buttons */
+.cta-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* CTA button: yellow theme */
+.slide-cta {
+  background: linear-gradient(
+    to right,
+    var(--slider-yellow-dark),
+    var(--slider-yellow)
+  ) !important;
+  color: var(--slider-gray-dark) !important;
+  font-weight: 600 !important;
+  padding: 8px 26px !important;
+  border-radius: 8px !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.slide-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 160, 0, 0.45);
+}
+
+.slide-cta-secondary {
+  border: 1.5px solid var(--slider-yellow) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 8px 26px !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(4px);
+  transition: transform 0.25s ease, background-color 0.25s ease !important;
+}
+
+.slide-cta-secondary:hover {
+  background: rgba(255, 193, 7, 0.18) !important;
+  transform: translateY(-3px);
+}
+
+.slide-cta-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Next & previous buttons — light gray glass, yellow on hover */
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
+  z-index: 3;
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  margin-top: -23px;
+  color: var(--slider-gray-dark);
   font-weight: bold;
   font-size: 18px;
-  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(244, 244, 241, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.prev {
+  left: 18px;
 }
 
 .next {
-  right: 0;
+  right: 18px;
 }
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--slider-yellow);
+  color: #2b2b28;
+  transform: scale(1.1);
 }
 
-/* The dots/bullets/indicators */
+.prev:active,
+.next:active {
+  transform: scale(0.95);
+}
+
+/* Dots container */
+.dots-container {
+  text-align: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* The dots/bullets/indicators — gray by default, yellow pill when active */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: lightgray;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(244, 244, 241, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.25s ease, width 0.25s ease,
+    transform 0.25s ease;
 }
 
-.active,
 .dot:hover {
-  background-color: orangered;
+  background-color: var(--slider-yellow-soft);
+  transform: scale(1.2);
 }
 
-/* Fading animation */
-.fade1 {
-  animation-name: fade1;
-  animation-duration: 4s;
+.dot.active {
+  background-color: var(--slider-yellow);
+  border-color: var(--slider-yellow-dark);
+  width: 26px;
+  border-radius: 6px;
 }
 
-.fade2 {
-  animation-name: fade2;
-  animation-duration: 4s;
+/* Small pulsing ring around the dot for featured slides, so they stand out
+   even when they aren't the active one */
+.dot-featured {
+  position: relative;
 }
-.fade3 {
-  animation-name: fade3;
-  animation-duration: 5s;
+
+.dot-featured::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  border: 1.5px solid var(--slider-yellow);
+  opacity: 0.7;
+  animation: dotPulse 1.8s ease-out infinite;
 }
-@keyframes fade1 {
+
+@keyframes dotPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Auto-advance progress bar */
+.slide-progress-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(244, 244, 241, 0.35);
+  z-index: 3;
+}
+
+.slide-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    to right,
+    var(--slider-yellow-dark),
+    var(--slider-yellow)
+  );
+  animation-name: fillProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fillProgress {
   from {
-    opacity: 0.3;
+    width: 0%;
   }
-
   to {
-    opacity: 1;
+    width: 100%;
   }
 }
 
-@keyframes fade2 {
-  from {
-    opacity: 0.2;
-    transform: translateY(50px);
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slides-track {
+    transition: none !important;
   }
-
-  to {
+  .mySlides-featured {
+    animation: none;
+  }
+  .dot-featured::after {
+    animation: none;
+    display: none;
+  }
+  .mySlidesText.slide-in .slide-badge,
+  .mySlidesText.slide-in h1,
+  .mySlidesText.slide-in p,
+  .mySlidesText.slide-in .cta-row,
+  .mySlidesText.slide-in .slide-cta {
+    animation: none;
     opacity: 1;
-    transform: translateY(0px);
+    transform: none;
   }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 600px) {
-  .mySlides {
-    height: 50vh;
-  }
-  .mySlidesText {
-    margin-top: 10%;
-    margin-left: 3%;
+/* ===== Responsive breakpoints ===== */
+
+/* Tablets */
+@media only screen and (max-width: 900px) {
+  .slideshow-container {
+    height: 65vh;
   }
 
   .mySlidesText h1 {
-    font-size: 6vw; /* Adjusted for smaller screens */
-    line-height: 7vw; /* Adjusted for smaller screens */
+    font-size: 38px;
+    line-height: 46px;
   }
 
   .mySlidesText p {
-    font-size: 3vw; /* Adjusted for smaller screens */
-    font-weight: 100;
-    line-height: 4vw; /* Adjusted for smaller screens */
-    margin: 25px 0px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
-@media only screen and (max-width: 300px) {
+/* Phones */
+@media only screen and (max-width: 600px) {
+  .slideshow-container {
+    height: 56vh;
+    min-height: 360px;
+    border-radius: 10px;
+  }
+
+  .mySlidesText {
+    margin-left: 4%;
+    width: 92%;
+  }
+
+  .mySlidesText h1 {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+
+  .mySlidesText p {
+    font-size: 3.4vw;
+    font-weight: 100;
+    line-height: 4.6vw;
+    margin: 16px 0px;
+  }
+
+  .cta-row {
+    gap: 10px;
+  }
+
+  .slide-cta,
+  .slide-cta-secondary {
+    padding: 6px 18px !important;
+    font-size: 13px !important;
+  }
+
   .prev,
-  .next,
-  .text {
+  .next {
+    width: 36px;
+    height: 36px;
+  }
+
+  .featured-ribbon {
+    font-size: 10px;
+    padding: 4px 40px;
+    top: 12px;
+    left: -38px;
+  }
+
+  .slide-badge {
     font-size: 11px;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .prev,
+  .next {
+    font-size: 11px;
+  }
+
+  .mySlidesText h1 {
+    font-size: 7.5vw;
+    line-height: 8.5vw;
   }
 }

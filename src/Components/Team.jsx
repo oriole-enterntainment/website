@@ -5,7 +5,7 @@ import img2 from "../Assets/team/team-2.png";
 import img3 from "../Assets/team/Aashish.PNG";
 import img4 from "../Assets/team/Adnan Khan.jpg";
 import img11 from "../Assets/team/Yash Tiwari.jpg";
-import img13 from "../Assets/team/Nitin Singh.jpg";
+import img13 from "../Assets/team/nitinsingh22.JPG";
 import img14 from "../Assets/team/saksham-2.jpeg";
 import img15 from "../Assets/team/naresh_new.jpg";
 import img6 from "../Assets/team/Manas Dubey.jpg";
