@@ -19,7 +19,7 @@ const Footer = () => {
             <p>
               <i>India's Biggest Live Stand Up Comedy Producers</i>
             </p>
-            <p>First Floor, M3M URBANA, above Little Burgundy, R3 - 137 Sector 67, Gurugram, Haryana 122101</p>
+            <p> Plot No. 2732, 4th Floor, Golf Course Ext Road, Block-A, Sushant Lok 3, Sector 57, Gurugram, Haryana 122011 </p>
             <p>
               <b>Phone: </b>+91 078301 00001, +91 9999671773 
             </p>

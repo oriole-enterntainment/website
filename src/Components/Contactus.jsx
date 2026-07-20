@@ -89,7 +89,7 @@ const Contactus =  () => {
           <div id="our-address">
             <div><img src={phoneicon} alt="phone-icon" /></div>
             <p className="heading-text">Our Address</p>
-            <p>First Floor, M3M URBANA, above Little Burgundy, R3 - 137, Sector 67, Gurugram, Haryana 122101</p>
+            <p>Plot No. 2732, 4th Floor, Golf Course Ext Road, Block-A, Sushant Lok 3, Sector 57, Gurugram, Haryana 122011</p>
           </div>
           <div id="grid-part1a">
             <div id="email-us">
