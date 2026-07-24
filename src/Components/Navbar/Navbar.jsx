@@ -107,6 +107,21 @@ const Navbar = () => {
               Book Now
             </Button>
           </a>
+          <a
+            href="https://maps.app.goo.gl/2RbqEKVWRWSRw9nE6"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+>
+  <Button
+    className="button locationButton"
+    variant="contained"
+    style={{ padding: "auto 30px", marginLeft: "10px" }}
+  >
+    Location
+  </Button>
+</a>
+          
           <div className="menuButton" onClick={handleOpenMenu}>
             <div
               id="bar1"

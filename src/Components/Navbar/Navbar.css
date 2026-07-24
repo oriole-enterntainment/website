@@ -148,3 +148,7 @@ button {
     width: 100%;
     transition: position 1s top 1s;
 }
+
+.locationButton {
+  margin-left: 10px;
+}
