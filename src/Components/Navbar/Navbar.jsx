@@ -90,6 +90,7 @@ const Navbar = () => {
                             </div> */}
             </div>
           </div>
+          <div className="navButtonsGroup">
           <a
             href="https://in.bookmyshow.com/events/oriole-entertainment-live/ET00316295"
             target="_blank"
@@ -121,6 +122,7 @@ const Navbar = () => {
     Location
   </Button>
 </a>
+</div>
           
           <div className="menuButton" onClick={handleOpenMenu}>
             <div

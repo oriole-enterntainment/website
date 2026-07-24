@@ -149,6 +149,33 @@ button {
     transition: position 1s top 1s;
 }
 
+.navButtonsGroup {
+  display: flex;
+  align-items: center;
+}
+
 .locationButton {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .navButtonsGroup {
+    flex-wrap: nowrap;
+  }
+
+  .navButtonsGroup .button {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .locationButton {
+    margin-left: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navButtonsGroup .button {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+  }
 }
