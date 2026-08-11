@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
             <p> Plot No. 2732, 4th Floor, Golf Course Ext Road, Block-A, Sushant Lok 3, Sector 57, Gurugram, Haryana 122011 </p>
             <p>
-              <b>Phone: </b>+91 078301 00001, +91 9999671773 
+              <b>Phone: </b>+91 078301 00001, +91 7302208919
             </p>
             <p>
               <b>Email: </b>info@orioleentertainment.com, brands@orioleentertainment.com
