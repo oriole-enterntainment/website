@@ -2,7 +2,6 @@ import React from "react";
 import "./Team.css";
 import img1 from "../Assets/team/team-1.png";
 import img2 from "../Assets/team/team-2.png";
-import img3 from "../Assets/team/Aashish.PNG";
 import img4 from "../Assets/team/Adnan Khan.jpg";
 import img11 from "../Assets/team/Yash Tiwari.jpg";
 import img13 from "../Assets/team/nitinsingh22.JPG";
@@ -29,7 +28,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Team = () => {
   const data = [
     { photo: img15, name: "Naresh Kumar", role: "Manager" },
-    { photo: img3, name: "Aashish Singh", role: "Manager ( Oriole Partnerships )" },
     { photo: img12, name: "Ajay Kumar", role: "Manager - Ground Operations" },
     { photo: img13, name: "Nitin Singh", role: "Sr. Artist Manager" },
     { photo: img14, name: "Saksham Mishra ", role: "Sr. A&R | Artist Manager" },
