@@ -72,7 +72,7 @@ const About = () => {
                 </div>
                 <h3 className={styles.cardTitle}>
                   {animateCount && (
-                    <CountUp end={1000000} duration={5} separator="," suffix="+" />
+                    <CountUp end={1500000} duration={5} separator="," suffix="+" />
                   )}
                 </h3>
                 <p>Tickets sold and counting</p>
@@ -95,7 +95,7 @@ const About = () => {
                   ></BusinessOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={7000} duration={5} suffix="+" />}
+                  {animateCount && <CountUp end={10000} duration={5} suffix="+" />}
                 </h3>
                 <p>
                   Shows brought to life across cities
@@ -120,7 +120,7 @@ const About = () => {
                   ></MicExternalOnOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={75} duration={5} suffix="+" />}
+                  {animateCount && <CountUp end={100} duration={5} suffix="+" />}
                 </h3>
                 <p>Artists in collaboration during our journey</p>
               </div>
@@ -142,7 +142,7 @@ const About = () => {
                   ></BusinessOutlinedIcon>
                 </div>
                 <h3 className={styles.cardTitle}>
-                  {animateCount && <CountUp end={100} duration={5} suffix="+" />}
+                  {animateCount && <CountUp end={130} duration={5} suffix="+" />}
                 </h3>
                 <p>
                    Cities covered nationwide
