@@ -1,6 +1,6 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: Poppins !important;
+/* App-level reset beyond index.css */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
