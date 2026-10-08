@@ -1,11 +1,11 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Analytics } from '@vercel/analytics/react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
-import BookArtist from './components/BookArtist/BookArtist';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import WhatsAppButton from './Components/WhatsAppButton/WhatsAppButton';
+import BookArtist from './Components/BookArtist/BookArtist';
 import Home from './pages/Home';
 import ArtistsPage from './pages/ArtistsPage';
 import TeamPage from './pages/TeamPage';
