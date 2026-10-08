@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -60,7 +60,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME || secrets.FTP_USER || vars.FTP_USERNAME || vars.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD || secrets.FTP_PASS }}
           port: ${{ secrets.FTP_PORT || 21 }}
-          protocol: ${{ secrets.FTP_PROTOCOL || 'ftp' }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
+          security: loose
+          timeout: 600000
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_SERVER_DIR || 'public_html/' }}
           exclude: |
