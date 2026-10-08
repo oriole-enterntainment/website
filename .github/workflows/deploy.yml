@@ -1,12 +1,15 @@
-name: Build & Deploy to GoDaddy
+name: Build Verification
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,40 +35,3 @@ jobs:
           VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
           VITE_FIREBASE_MEASUREMENT_ID: ${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}
-
-      - name: Validate FTP Credentials
-        run: |
-          SERVER="${{ secrets.FTP_SERVER || secrets.FTP_HOST || vars.FTP_SERVER || vars.FTP_HOST }}"
-          USER="${{ secrets.FTP_USERNAME || secrets.FTP_USER || vars.FTP_USERNAME || vars.FTP_USER }}"
-          PASS="${{ secrets.FTP_PASSWORD || secrets.FTP_PASS }}"
-
-          if [ -z "$SERVER" ]; then
-            echo "::error::Missing FTP Server! Add secret FTP_SERVER in GitHub Settings -> Secrets and variables -> Actions."
-            exit 1
-          fi
-          if [ -z "$USER" ]; then
-            echo "::error::Missing FTP Username! Add secret FTP_USERNAME in GitHub Settings -> Secrets and variables -> Actions."
-            exit 1
-          fi
-          if [ -z "$PASS" ]; then
-            echo "::error::Missing FTP Password! Add secret FTP_PASSWORD in GitHub Settings -> Secrets and variables -> Actions."
-            exit 1
-          fi
-          echo "FTP configuration check passed."
-
-      - name: Deploy via FTP to GoDaddy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST || vars.FTP_SERVER || vars.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME || secrets.FTP_USER || vars.FTP_USERNAME || vars.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD || secrets.FTP_PASS }}
-          port: ${{ secrets.FTP_PORT || 21 }}
-          protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
-          security: loose
-          timeout: 600000
-          local-dir: ./dist/
-          server-dir: ${{ secrets.FTP_SERVER_DIR || 'public_html/' }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
