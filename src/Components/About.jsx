@@ -77,7 +77,7 @@ export default function About() {
             <p>
               <strong>Oriole Entertainment Pvt Ltd</strong> has been a trailblazer in bringing
               comedy shows to Tier 2 and Tier 3 cities since 2017. As the home of renowned
-              comedians like <strong>Anubhav Singh Bassi</strong> and <strong>Harsh Gujral</strong>,
+              comedians like <strong>Anubhav Singh Bassi</strong> , <strong>Harsh Gujral</strong> and <strong>Ravi Gupta</strong>
               we have been dedicated to spreading laughter across cities such as{' '}
               <strong>Agra, Gurugram, Lucknow, Kanpur, Dehradun</strong>, and many more.
             </p>

@@ -1,79 +1,109 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Phone, ChevronRight, Instagram, Facebook, Ticket } from 'lucide-react';
+import { MapPin, Mail, Phone, Instagram, Youtube } from 'lucide-react';
 import './Footer.css';
 
 const BOOK_URL = 'https://in.bookmyshow.com/events/oriole-entertainment-live/ET00316295';
+
+const quickLinks = [
+  { label: 'Home',          to: '/' },
+  { label: 'About Us',      to: '/#about' },
+  { label: 'What We Do',    to: '/#what-we-do' },
+  { label: 'Our Work',      to: '/#work' },
+  { label: 'Artists',       to: '/artists' },
+  { label: 'Upcoming Shows',to: '/#tours' },
+  { label: 'Contact',       to: '/#contact' },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="footer__top container">
-        {/* Column 1: Brand Info */}
+        {/* Brand */}
         <div className="footer__col footer__brand">
-          <img src="/logo.png" alt="Oriole Entertainment" className="footer__logo" />
+          <img src="/logo.png" alt="Oriole Entertainment" className="footer__logo" width="130" />
           <p className="footer__tagline">
-            <i>India's Biggest Live Stand Up Comedy Producers</i>
+            India's Biggest Live Stand Up Comedy Producers
           </p>
-          <p className="footer__desc">
-            Plot No. 2732, 4th Floor, Golf Course Ext Road, Block-A, Sushant Lok 3, Sector 57, Gurugram, Haryana 122011
+          <p className="footer__address">
+            Plot No. 2732, 4th Floor, Golf Course Ext Road,<br />
+            Sushant Lok 3, Sector 57,<br />
+            Gurugram, Haryana 122011
           </p>
           <div className="footer__social">
-            <a href="https://www.instagram.com/orioleentertainment/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/orioleentertainment/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Oriole Entertainment on Instagram"
+              className="footer__social-link"
+            >
               <Instagram size={18} />
             </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook size={18} />
-            </a>
-            <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="BookMyShow">
-              <Ticket size={18} />
+            <a
+              href="https://www.youtube.com/@OrioleEntertainment"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Oriole Entertainment on YouTube"
+              className="footer__social-link"
+            >
+              <Youtube size={18} />
             </a>
           </div>
         </div>
 
-        {/* Column 2: Quick Links */}
+        {/* Quick Links */}
         <div className="footer__col">
-          <h4>Useful Links</h4>
-          <ul className="footer__links">
-            <li><ChevronRight size={14} className="footer__chevron" /><Link to="/">Home</Link></li>
-            <li><ChevronRight size={14} className="footer__chevron" /><a href="#about">About us</a></li>
-            <li><ChevronRight size={14} className="footer__chevron" /><Link to="/artists">Artists</Link></li>
-            <li><ChevronRight size={14} className="footer__chevron" /><Link to="/team">Team</Link></li>
-            <li><ChevronRight size={14} className="footer__chevron" /><a href="#contact">Contact</a></li>
+          <h4 className="footer__col-heading">Quick Links</h4>
+          <ul className="footer__links" role="list">
+            {quickLinks.map(l => (
+              <li key={l.label}>
+                <Link to={l.to} className="footer__link">{l.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Column 3: Contact Info */}
+        {/* Contact */}
         <div className="footer__col">
-          <h4>Contact Us</h4>
-          <ul className="footer__contact-list">
+          <h4 className="footer__col-heading">Contact</h4>
+          <ul className="footer__contact-list" role="list">
             <li>
-              <MapPin size={16} className="footer__icon" />
-              <span>Gurugram, Haryana 122011</span>
+              <Phone size={15} aria-hidden="true" />
+              <a href="tel:+917830100001">+91 078301 00001</a>
             </li>
             <li>
-              <Phone size={16} className="footer__icon" />
-              <span>+91 078301 00001, +91 7302208919</span>
+              <Phone size={15} aria-hidden="true" />
+              <a href="tel:+917302208919">+91 7302208919</a>
             </li>
             <li>
-              <Mail size={16} className="footer__icon" />
-              <a href="mailto:info@orioleentertainment.com">info@orioleentertainment.com</a>
+              <Mail size={15} aria-hidden="true" />
+              <a href="mailto:team@orioleentertainment.com">team@orioleentertainment.com</a>
             </li>
             <li>
-              <Mail size={16} className="footer__icon" />
+              <Mail size={15} aria-hidden="true" />
               <a href="mailto:brands@orioleentertainment.com">brands@orioleentertainment.com</a>
             </li>
+            <li>
+              <MapPin size={15} aria-hidden="true" />
+              <span>Gurugram, Haryana 122011</span>
+            </li>
           </ul>
         </div>
 
-        {/* Column 4: Book a Show CTA */}
-        <div className="footer__col footer__cta-col">
-          <h4>Book a Show</h4>
-          <p className="footer__cta-desc">
-            Never miss an event from your favorite comedians! Book live tickets directly on BookMyShow.
+        {/* Book CTA */}
+        <div className="footer__col footer__book-col">
+          <h4 className="footer__col-heading">Book a Show</h4>
+          <p className="footer__book-desc">
+            Catch your favourite comedians live. Book tickets directly on BookMyShow.
           </p>
-          <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" className="btn-primary footer__book-btn">
+          <a
+            href={BOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary footer__book-btn"
+          >
             Book Now
           </a>
         </div>
@@ -81,7 +111,12 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© Copyright <b>Oriole Entertainment</b>. All Rights Reserved</p>
+          <p>
+            &copy; {year} <strong>Oriole Entertainment Pvt Ltd</strong>. All Rights Reserved.
+          </p>
+          <p className="footer__bottom-right">
+            Made with ♥ in India
+          </p>
         </div>
       </div>
     </footer>

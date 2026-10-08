@@ -46,7 +46,7 @@ const rawArtistsData = [
   {
     id: "Osho Jain  (1)_compressed.pdf",
     name: "Osho Jain",
-    image: "osho-jain.jpg",
+    image: "osho-jain-tour.jpg",
     description: "Indie singer-songwriter weaving magic with his acoustic tunes.",
     shows: [
       "Nov 28, 2026 - Bengaluru",
@@ -566,17 +566,18 @@ export default function UpcomingTours() {
               >
                 {/* Header */}
                 <div className="tour-card__header">
-                  <div className="tour-card__img-wrap">
-                    <img
-                      src={`/images/${artist.image}`}
-                      alt={artist.name}
-                      onError={(e) => {
-                        if (e.target.src !== fallbackAvatar) {
-                          e.target.src = fallbackAvatar;
-                        }
-                      }}
-                    />
-                  </div>
+                    <div className="tour-card__img-wrap">
+                      <img
+                        src={`/images/${artist.image}`}
+                        alt={artist.name}
+                        className={artist.name === 'Osho Jain' ? 'tour-card__img--osho' : ''}
+                        onError={(e) => {
+                          if (e.target.src !== fallbackAvatar) {
+                            e.target.src = fallbackAvatar;
+                          }
+                        }}
+                      />
+                    </div>
                   <div className="tour-card__meta">
                     <h3>{artist.name}</h3>
                     <p className="tour-card__desc">{artist.description}</p>

@@ -78,6 +78,11 @@
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.tour-card__img-wrap img.tour-card__img--osho {
+  object-position: center center;
+  transform: scale(1.05);
+}
+
 .tour-card:hover .tour-card__img-wrap {
   transform: scale(1.08);
   box-shadow: 0 6px 20px rgba(232, 65, 24, 0.45);
@@ -86,6 +91,10 @@
 
 .tour-card:hover .tour-card__img-wrap img {
   transform: scale(1.55);
+}
+
+.tour-card:hover .tour-card__img-wrap img.tour-card__img--osho {
+  transform: scale(1.18);
 }
 
 .tour-card__meta {

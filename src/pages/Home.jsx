@@ -1,22 +1,22 @@
-import HeroSlider from '../components/HeroSlider';
-import About from '../components/About';
+import Hero from '../sections/Hero/Hero';
+import WhoWeAre from '../sections/WhoWeAre/WhoWeAre';
+import WhatWeDo from '../sections/WhatWeDo/WhatWeDo';
+import Gallery from '../components/Gallery';
 import UpcomingTours from '../components/UpcomingTours';
 import SpecialEvents from '../components/SpecialEvents';
-import Gallery from '../components/Gallery';
 import BrandTicker from '../components/BrandTicker';
-import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <main style={{ paddingTop: 0 }}>
-      <HeroSlider />
-      <About />
+    <main>
+      <Hero />
+      <WhoWeAre />
+      <WhatWeDo />
+      <Gallery />
       <UpcomingTours />
       <SpecialEvents />
-      <Gallery />
       <BrandTicker />
-      <Testimonials />
       <Contact />
     </main>
   );

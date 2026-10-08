@@ -3,17 +3,21 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
+import BookArtist from './components/BookArtist/BookArtist';
 import Home from './pages/Home';
 import ArtistsPage from './pages/ArtistsPage';
 import TeamPage from './pages/TeamPage';
 import './App.css';
 
+
 const pageVariants = {
-  initial: { opacity: 0, y: 20 },
-  in:      { opacity: 1, y: 0 },
-  out:     { opacity: 0, y: -10 },
+  initial: { opacity: 0 },
+  in:      { opacity: 1 },
+  out:     { opacity: 0 },
 };
-const pageTransition = { duration: 0.35, ease: 'easeInOut' };
+const pageTransition = { duration: 0.3 };
 
 function AnimatedPage({ children }) {
   return (
@@ -42,6 +46,9 @@ function App() {
         </Routes>
       </AnimatePresence>
       <Footer />
+      <ScrollToTop />
+      <WhatsAppButton />
+      <BookArtist />
       <Analytics />
     </>
   );

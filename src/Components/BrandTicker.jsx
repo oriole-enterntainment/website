@@ -31,7 +31,7 @@ const brands = [
   { name: 'Almost Sane',     src: '/images/brands/almostsane.png', darkBg: true },
   { name: 'Kamasā',          src: '/images/brands/kamasa.png' },
   { name: 'Soulliqo',        src: '/images/brands/soulliqo.png' },
-  { name: 'NoGrav',          src: '/images/brands/nograv.jpg', darkBg: true },
+  { name: 'NoGrav',          src: '/images/brands/nograv.png', darkBg: true },
   { name: 'Crepdog Crew',    src: '/images/brands/crepdogcrew.png', darkBg: true },
   { name: 'Rivona',          src: '/images/brands/rivona.png' },
 ];

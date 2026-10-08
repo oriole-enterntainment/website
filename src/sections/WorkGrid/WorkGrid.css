@@ -1,0 +1,213 @@
+.work-grid {
+  background: var(--bg-secondary);
+}
+
+/* Filter buttons */
+.work-grid__filters {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.work-grid__filter-btn {
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.work-grid__filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.work-grid__filter-btn--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.work-grid__filter-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Grid */
+.work-grid__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tile */
+.work-tile {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+}
+.work-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.work-tile__img-wrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #111;
+}
+
+.work-tile__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease), opacity 0.3s;
+}
+.work-tile:hover .work-tile__img {
+  transform: scale(1.05);
+}
+
+.work-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.work-tile:hover .work-tile__overlay {
+  opacity: 1;
+}
+
+.work-tile__play {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(232,65,24,0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+  cursor: pointer;
+}
+.work-tile__play:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+}
+.work-tile__play:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.work-tile__meta {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.work-tile__tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.work-tile__tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(232,65,24,0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.work-tile__title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.work-tile__sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Video modal */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.video-modal__inner {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.video-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.video-modal__close:hover { background: rgba(255,255,255,0.25); }
+.video-modal__close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+.video-modal__embed {
+  position: relative;
+  padding-top: 56.25%;
+}
+.video-modal__embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .work-grid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .work-grid__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  /* Always show overlay on mobile */
+  .work-tile__overlay { opacity: 1; background: rgba(0,0,0,0.3); }
+}
