@@ -232,11 +232,13 @@ const rawArtistsData = [
       "Dec 5, 2026 - Bangalore",
       "Dec 6, 2026 - Bangalore",
       "Dec 11, 2026 - TBA",
-      "Dec 12, 2026 - Delhi",
-      "Dec 13, 2026 - Delhi",
-      "Dec 18, 2026 - Lucknow",
-      "Dec 19, 2026 - Prayagraj",
-      "Dec 20, 2026 - Riwa"
+          "Dec 12, 2026 - Delhi",
+          "Dec 13, 2026 - Delhi",
+          "Dec 18, 2026 - Lucknow",
+          "Dec 19, 2026 - Kormangala, Bengaluru",
+          "Dec 20, 2026 - Kormangala, Bengaluru",
+          "Dec 26, 2026 - Yashobhoomi , Delhi",
+          "Dec 27, 2026 - Yashobhoomi, Delhi",
     ],
     instagram: "https://www.instagram.com/be_a_bassi/",
     sponsorship: {
