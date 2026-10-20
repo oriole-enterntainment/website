@@ -212,7 +212,7 @@ const rawArtistsData = [
     instagram: "https://www.instagram.com/just.avinashgupta/"
   },
   {
-    id: "bassiDeck2.pdf",
+    id: "bassideck44.pdf",
     name: "Anubhav Singh Bassi",
     image: "bassi.jpg",
     description: "Master of relatable anecdotes and storytelling.",
