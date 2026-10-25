@@ -93,9 +93,7 @@ const rawArtistsData = [
     description: "High-energy standup comedian with great crowd work.",
     shows: [
       
-      "Oct 23, 2026 - Bangalore",
-      "Oct 24, 2026 - Chennai",
-      "Oct 25, 2026 - Goa",
+   
       "Oct 29, 2026 - Bahrain",
       "Oct 30, 2026 - Doha",
       "Oct 31, 2026 - Oman",
@@ -218,9 +216,7 @@ const rawArtistsData = [
     description: "Master of relatable anecdotes and storytelling.",
     shows: [
       
-      "Oct 23, 2026 - Sagar",
-      "Oct 24, 2026 - Bhopal",
-      "Oct 25, 2026 - Indore",
+      
       "Nov 13, 2026 - Mumbai",
       "Nov 14, 2026 - Mumbai",
       "Nov 15, 2026 - Mumbai",
