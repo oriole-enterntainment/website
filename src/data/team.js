@@ -28,6 +28,7 @@ export const teamMembers = [
   { name: 'Yash Tiwari',     role: 'Sr. Artist Manager',                photo: '/team/Yash Tiwari.jpg' },
   { name: 'Adnan Khan',      role: 'Sr. Event Programmer',              photo: '/team/Adnan Khan.jpg' },
   { name: 'Sarthak Garg',    role: 'Associate, Marketing & Partnership', photo: '/team/Sarthak Garg.jpg' },
+  { name: 'Sohail',          role: 'Sr. Artist Manager',                    photo: '/team/sohaill.jpg' },
   { name: 'Aman Swaroop',    role: 'Artist Manager',                    photo: '/team/amanswaroop.jpeg' },
   { name: 'Manas Dubey',     role: 'Artist Manager',                    photo: '/team/Manas Dubey.jpg' },
   { name: 'Anushka',         role: 'Graphic Designer',                  photo: '/team/anushkaa.jpeg' },
