@@ -384,8 +384,7 @@ const rawArtistsData = [
     image: "ruchika-lohiya.jpg",
     description: "Hilarious and witty comic taking the internet by storm.",
     shows: [
-      "Oct 24, 2026 - Kanpur",
-      "Oct 25, 2026 - Lucknow",
+     
       "Oct 31, 2026 - Indore",
       "Nov 1, 2026 - Bhopal",
       "Nov 21, 2026 - Chandigarh",
@@ -425,9 +424,16 @@ const rawArtistsData = [
     image: "karma.jpg",
     description: "Dynamic rapper and hip-hop artist with hard-hitting lyrics.",
     shows: [
-      "Oct 11, 2026 - New Delhi"
+      "To Be Announced"
     ],
-    instagram: "https://www.instagram.com/karmathelekhak/?hl=en"
+    instagram: "https://www.instagram.com/karmathelekhak/?hl=en",
+    sponsorship: {
+      titleSponsor: {
+        status: 'sponsored',
+        sponsorName: 'NAWGATI',
+        logo: '/images/brands/nawgati_dark.svg'
+      }
+    }
   },
   {
     id: "Bharat Chauhan  (1)_compressed.pdf",
@@ -460,16 +466,31 @@ const rawArtistsData = [
     description: "Splash N Play — A family-friendly kids entertainment experience featuring water slides, splash pools, foam parties, adventure activities, games, mascots and interactive experiences.",
     shows: ["To Be Announced"],
     instagram: "https://www.instagram.com/splash.n.play/"
+  },
+  {
+    id: "TFE DECK (1)-compressed.pdf",
+    name: "TFE - There Is Funny Everywhere",
+    image: "tfe.png",
+    description: "A stand-up comedy show that travels across India to discover the next wave of comedians.",
+    shows: [
+      "To Be Announced"
+    ],
+    instagram: "https://www.instagram.com/raghavmandava/",
+    sponsorship: {
+      titleSponsor: { status: 'available', label: 'AVAILABLE' },
+      coPoweredBy: { status: 'available', label: 'AVAILABLE' }
+    }
   }
 ];
 
-// Reorder so Bassi, Harsh Gujral, Ravi Gupta are top 3 (exact order as showcase repo)
+// Reorder so Bassi, Harsh Gujral, Ravi Gupta are top 3, and TFE is placed last
 const topArtistsNames = ["Anubhav Singh Bassi", "Harsh Gujral", "Ravi Gupta"];
 const orderedArtists = [
   ...rawArtistsData.filter(a => a.name === "Anubhav Singh Bassi"),
   ...rawArtistsData.filter(a => a.name === "Harsh Gujral"),
   ...rawArtistsData.filter(a => a.name === "Ravi Gupta"),
-  ...rawArtistsData.filter(a => !topArtistsNames.includes(a.name))
+  ...rawArtistsData.filter(a => !topArtistsNames.includes(a.name) && a.name !== "TFE - There Is Funny Everywhere"),
+  ...rawArtistsData.filter(a => a.name === "TFE - There Is Funny Everywhere")
 ];
 
 function groupShowsByMonth(shows) {
@@ -621,6 +642,7 @@ export default function UpcomingTours() {
                         </a>
                       )}
                     </div>
+                    {artist.sponsorship.coPoweredBy && (
                     <div className="sponsor-row">
                       <span className="sponsor-label">Co-Powered By:</span>
                       {artist.sponsorship.coPoweredBy?.status === 'available' && (
@@ -632,6 +654,7 @@ export default function UpcomingTours() {
                         </a>
                       )}
                     </div>
+                    )}
                   </div>
                 )}
 
