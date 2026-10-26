@@ -21,8 +21,8 @@ export const leadership = [
 ];
 
 export const teamMembers = [
-  { name: 'Naresh Kumar',    role: 'Manager',                           photo: '/team/naresh_new.jpg' },
-  { name: 'Ajay Kumar',      role: 'Manager – Ground Operations',        photo: '/team/Ajay Kumar.jpg' },
+  { name: 'Naresh Kumar',    role: 'General Manager',                           photo: '/team/naresh_new.jpg' },
+  { name: 'Ajay Kumar',      role: 'Liaison Officer',                   photo: '/team/ajaykumarlo.jpg' },
   { name: 'Nitin Singh',     role: 'Sr. Artist Manager',                photo: '/team/nitinsingh22.JPG' },
   { name: 'Saksham Mishra',  role: 'Sr. A&R | Artist Manager',          photo: '/team/saksham-2.jpeg' },
   { name: 'Yash Tiwari',     role: 'Sr. Artist Manager',                photo: '/team/Yash Tiwari.jpg' },
