@@ -8,10 +8,10 @@ const artists = [
   { name: "Ravi Gupta", image: "/images/ravi-gupta.jpg", fallback: "/portfolio/27.JPG", link: 'https://www.instagram.com/shudhdesicomic/' },
   { name: "Kanan Gill", image: "/images/kanan-gill.jpg", fallback: "/portfolio/4.png", link: 'https://www.instagram.com/kanangill/' },
   { name: "Osho Jain", image: "/images/osho-jain.jpg", fallback: "/portfolio/19.jpg", link: 'https://www.instagram.com/oshojain_/' },
-  { name: "Pritish Narula", image: "/portfolio/34.png", fallback: "/portfolio/34.png", link: 'https://www.instagram.com/pritishnarula/' },
+
   { name: "Rakesh Addlakha", image: "/portfolio/32.png", fallback: "/portfolio/32.png", link: 'https://www.instagram.com/rakeshaddlakha/' },
   { name: "Onkar Yadav", image: "/portfolio/21.JPG", fallback: "/portfolio/21.JPG", link: 'https://www.instagram.com/onkaryadav/' },
-  { name: "Pratyush Chaubey", image: "/portfolio/22.JPG", fallback: "/portfolio/22.JPG", link: 'https://www.instagram.com/chaubey.pratyush/' },
+
   { name: "Kaustub Agarwal", image: "/portfolio/31.png", fallback: "/portfolio/31.png", link: 'https://www.instagram.com/hilarious_big/' },
   { name: "Rahul Dua", image: "/portfolio/5.png", fallback: "/portfolio/5.png", link: 'https://www.instagram.com/therahuldua/' },
   { name: "Abhishek Upamanyu", image: "/portfolio/4.png", fallback: "/portfolio/4.png", link: 'https://www.instagram.com/aupmanyu/' },
