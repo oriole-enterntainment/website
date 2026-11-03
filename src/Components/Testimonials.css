@@ -15,7 +15,8 @@
   display: flex;
   gap: 1.75rem;
   width: max-content;
-  animation: testimonialsTicker 35s linear infinite;
+  animation: testimonialsTicker 36s linear infinite;
+  will-change: transform;
 }
 
 @keyframes testimonialsTicker {
@@ -23,17 +24,19 @@
   to { transform: translateX(-33.333%); }
 }
 
-.testimonials-ticker-wrapper:hover .testimonials-ticker-track {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .testimonials-ticker-wrapper:hover .testimonials-ticker-track {
+    animation-play-state: paused;
+  }
 }
 
 .testimonial-card {
-  width: 380px;
+  width: 370px;
   flex-shrink: 0;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.75rem;
+  padding: 1.85rem 1.65rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -41,10 +44,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  border-color: rgba(232, 65, 24, 0.3);
+@media (hover: hover) {
+  .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-color: rgba(232, 65, 24, 0.3);
+  }
 }
 
 .testimonial-card__quote-icon {
@@ -83,6 +88,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent);
+  flex-shrink: 0;
 }
 
 .testimonial-card__name {
@@ -98,7 +104,12 @@
 
 @media (max-width: 600px) {
   .testimonial-card {
-    width: 300px;
-    padding: 1.5rem 1.25rem;
+    width: 295px;
+    padding: 1.4rem 1.25rem;
+    border-radius: var(--radius);
+  }
+  .testimonial-card__text {
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
   }
 }

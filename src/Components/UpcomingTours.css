@@ -4,7 +4,7 @@
 
 .tours__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 1.5rem;
 }
 
@@ -13,36 +13,35 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
   position: relative;
 }
 
-/* Red-to-transparent gradient overlay — fades in on hover */
 .tour-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(232, 65, 24, 0.10) 0%, transparent 100%);
+  background: linear-gradient(rgba(232, 65, 24, 0.06) 0%, transparent 100%);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.35s ease;
   z-index: 0;
 }
 
-.tour-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
-  border-color: var(--accent);
+@media (hover: hover) {
+  .tour-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent);
+  }
+  .tour-card:hover::before {
+    opacity: 1;
+  }
 }
 
-.tour-card:hover::before {
-  opacity: 1;
-}
-
-/* Ensure card content sits above the ::before overlay */
 .tour-card > * {
   position: relative;
   z-index: 1;
@@ -50,23 +49,23 @@
 
 .tour-card__header {
   display: flex;
-  gap: 1.15rem;
-  padding: 1.4rem;
+  gap: 1.1rem;
+  padding: 1.35rem;
   border-bottom: 1px solid var(--border);
   align-items: flex-start;
 }
 
-/* Zoomed in artist face photo */
+/* Artist avatar */
 .tour-card__img-wrap {
-  width: 84px;
-  height: 84px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  border: 3px solid var(--accent);
-  box-shadow: 0 4px 14px rgba(232, 65, 24, 0.25);
+  border: 2.5px solid var(--accent);
+  box-shadow: 0 4px 14px rgba(232, 65, 24, 0.22);
   background: var(--bg-secondary);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }
 
 .tour-card__img-wrap img {
@@ -74,7 +73,7 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transform: scale(1.35); /* Zoomed in so face is clearly visible */
+  transform: scale(1.35);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -83,18 +82,17 @@
   transform: scale(1.05);
 }
 
-.tour-card:hover .tour-card__img-wrap {
-  transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(232, 65, 24, 0.45);
-  border-color: var(--accent-orange, #ff6b00);
-}
-
-.tour-card:hover .tour-card__img-wrap img {
-  transform: scale(1.55);
-}
-
-.tour-card:hover .tour-card__img-wrap img.tour-card__img--osho {
-  transform: scale(1.18);
+@media (hover: hover) {
+  .tour-card:hover .tour-card__img-wrap {
+    transform: scale(1.06);
+    box-shadow: 0 6px 20px rgba(232, 65, 24, 0.35);
+  }
+  .tour-card:hover .tour-card__img-wrap img {
+    transform: scale(1.52);
+  }
+  .tour-card:hover .tour-card__img-wrap img.tour-card__img--osho {
+    transform: scale(1.15);
+  }
 }
 
 .tour-card__meta {
@@ -102,6 +100,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  min-width: 0;
 }
 
 .tour-card__meta h3 {
@@ -109,6 +108,7 @@
   font-weight: 800;
   color: var(--text);
   margin: 0;
+  line-height: 1.25;
 }
 
 .tour-card__desc {
@@ -121,32 +121,34 @@
 .tour-card__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.4rem;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
 }
 
 /* Sponsorship Block */
 .tour-card__sponsorship {
-  padding: 0.85rem 1.4rem;
+  padding: 0.85rem 1.35rem;
   background: rgba(232, 65, 24, 0.03);
   border-bottom: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .sponsor-row {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
+  flex-wrap: wrap;
 }
 
 .sponsor-label {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   font-weight: 600;
   white-space: nowrap;
-  width: 100px;
+  width: 95px;
+  flex-shrink: 0;
 }
 
 .sponsor-badge {
@@ -155,14 +157,14 @@
   gap: 0.35rem;
   font-size: 0.72rem;
   font-weight: 700;
-  padding: 0.22rem 0.75rem;
+  padding: 0.22rem 0.72rem;
   border-radius: 99px;
   letter-spacing: 0.05em;
   text-decoration: none;
 }
 
 .badge-locked {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.07);
   color: var(--text-muted);
 }
 
@@ -179,8 +181,10 @@
   transition: background 0.2s ease;
 }
 
-.badge-available:hover {
-  background: rgba(22, 163, 74, 0.2);
+@media (hover: hover) {
+  .badge-available:hover {
+    background: rgba(22, 163, 74, 0.2);
+  }
 }
 
 .pulse-dot {
@@ -189,6 +193,7 @@
   background: #16a34a;
   border-radius: 50%;
   animation: pulse 1.5s infinite;
+  flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -198,7 +203,7 @@
 
 /* Upcoming Shows */
 .tour-card__shows {
-  padding: 1.25rem 1.4rem;
+  padding: 1.25rem 1.35rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -215,8 +220,9 @@
 }
 
 .shows-list {
-  max-height: 260px;
+  max-height: 250px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding-right: 0.25rem;
 }
 
@@ -252,12 +258,13 @@
   padding: 0.35rem 0.5rem;
   color: var(--text-muted);
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  vertical-align: top;
 }
 
 .shows-table td:first-child {
   font-weight: 600;
   color: var(--text);
-  width: 55%;
+  width: 52%;
 }
 
 .tba-month .shows-table td {
@@ -268,5 +275,20 @@
 @media (max-width: 600px) {
   .tours__grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .tour-card__header {
+    padding: 1.15rem;
+    gap: 0.9rem;
+  }
+  .tour-card__img-wrap {
+    width: 70px;
+    height: 70px;
+  }
+  .tour-card__shows {
+    padding: 1.15rem;
+  }
+  .tour-card__sponsorship {
+    padding: 0.75rem 1.15rem;
   }
 }

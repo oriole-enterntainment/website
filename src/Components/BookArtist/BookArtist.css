@@ -12,7 +12,7 @@
   background: var(--accent);
   color: #fff;
   padding: 0.7rem 1.2rem;
-  border-radius: 8px 8px 0 0; /* tab shape — rounded top when rotated */
+  border-radius: 8px 8px 0 0;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -21,6 +21,7 @@
   box-shadow: -3px 0 16px rgba(232, 65, 24, 0.4);
   transition: background 0.2s, box-shadow 0.2s;
   white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
 }
 .book-artist-fab:hover {
   background: var(--accent-hover);
@@ -36,8 +37,6 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   z-index: 700;
 }
 
@@ -50,6 +49,7 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem 1rem;
+  padding-bottom: max(1.5rem, var(--safe-bottom));
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -57,7 +57,8 @@
 /* ── Panel ────────────────────────────────────────────────── */
 .book-artist-panel {
   position: relative;
-  background: #fff;
+  background: #ffffff;
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   width: min(640px, 100%);
   max-height: calc(100vh - 3rem);
@@ -76,8 +77,13 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.book-artist-form::-webkit-scrollbar { width: 5px; }
-.book-artist-form::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 99px; }
+.book-artist-form::-webkit-scrollbar {
+  width: 5px;
+}
+.book-artist-form::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 99px;
+}
 
 /* ── Header ───────────────────────────────────────────────── */
 .book-artist-panel__header {
@@ -88,7 +94,7 @@
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: #fff;
+  background: #ffffff;
   z-index: 1;
 }
 
@@ -96,14 +102,14 @@
   font-size: 1.5rem;
   font-weight: 900;
   color: var(--text);
-  line-height: 1.1;
+  line-height: 1.15;
   margin: 0;
 }
 
 .book-artist-panel__close {
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
   background: var(--bg-secondary);
   display: flex;
@@ -114,11 +120,14 @@
   border: none;
   transition: background 0.2s;
 }
-.book-artist-panel__close:hover { background: #e5e5e5; }
-.book-artist-panel__close:focus-visible { outline: 2px solid var(--accent); }
+.book-artist-panel__close:hover {
+  background: #e5e5e5;
+}
+.book-artist-panel__close:focus-visible {
+  outline: 2px solid var(--accent);
+}
 
 /* ── Form ─────────────────────────────────────────────────── */
-
 .book-artist-form__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -147,20 +156,22 @@
   letter-spacing: 0.06em;
 }
 
+/* Minimum 16px font-size to prevent automatic Safari iPhone page zoom */
 .book-artist-form__field input,
 .book-artist-form__field select,
 .book-artist-form__field textarea {
   width: 100%;
-  padding: 0.65rem 0.85rem;
+  padding: 0.7rem 0.85rem;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 16px; /* iOS Safari auto-zoom prevention */
   font-family: var(--font-body);
   color: var(--text);
   background: var(--bg);
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .book-artist-form__field input:focus,
@@ -185,6 +196,7 @@
   justify-content: center;
   font-size: 0.95rem;
   padding: 0.85rem;
+  min-height: 48px;
 }
 
 .book-artist-form__note {
@@ -240,8 +252,11 @@
   .book-artist-panel__header {
     padding: 1.25rem 1.25rem 1rem;
   }
+  .book-artist-panel__title {
+    font-size: 1.3rem;
+  }
   .book-artist-fab {
     font-size: 0.72rem;
-    padding: 0.6rem 1rem;
+    padding: 0.55rem 0.95rem;
   }
 }

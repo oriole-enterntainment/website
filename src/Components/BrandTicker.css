@@ -13,9 +13,10 @@
 
 .ticker-track {
   display: flex;
-  gap: 2rem;
+  gap: 1.75rem;
   width: max-content;
-  animation: ticker 45s linear infinite;
+  animation: ticker 42s linear infinite;
+  will-change: transform;
 }
 
 @keyframes ticker {
@@ -23,47 +24,54 @@
   to { transform: translateX(-33.333%); }
 }
 
-.ticker-wrapper:hover .ticker-track {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .ticker-wrapper:hover .ticker-track {
+    animation-play-state: paused;
+  }
 }
 
-/* Larger Brand Cards */
+/* Brand Cards */
 .brand-item {
   flex-shrink: 0;
-  width: 200px;
-  height: 96px;
+  width: 190px;
+  height: 92px;
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 0.9rem 1.4rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
 
-.brand-item:hover {
-  transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  border-color: var(--accent-orange);
+@media (hover: hover) {
+  .brand-item:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-orange);
+  }
 }
 
 .brand-item--dark {
   background: #181818;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .brand-item img {
   max-width: 100%;
-  max-height: 56px;
+  max-height: 52px;
   object-fit: contain;
   filter: grayscale(15%);
   transition: filter 0.3s ease;
 }
 
-.brand-item:hover img {
-  filter: grayscale(0%);
+@media (hover: hover) {
+  .brand-item:hover img {
+    filter: grayscale(0%);
+  }
 }
 
 .brand-fallback {
@@ -72,4 +80,22 @@
   font-weight: 600;
   color: var(--text-muted);
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .brand-ticker {
+    padding: 56px 0;
+  }
+  .ticker-track {
+    gap: 1.1rem;
+  }
+  .brand-item {
+    width: 155px;
+    height: 76px;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+  }
+  .brand-item img {
+    max-height: 42px;
+  }
 }

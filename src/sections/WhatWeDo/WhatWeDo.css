@@ -14,7 +14,7 @@
 }
 
 .wwd__title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 900;
   color: #fff;
   margin: 0.5rem 0 0.75rem;
@@ -22,9 +22,9 @@
 }
 
 .wwd__subtitle {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 1.05rem;
-  max-width: 460px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -32,16 +32,20 @@
 .wwd__panels {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  min-height: 600px;
+  min-height: 580px;
 }
 
 .wwd__panel {
   position: relative;
   overflow: hidden;
   cursor: default;
-  min-height: 550px;
+  min-height: 520px;
   display: flex;
   align-items: flex-end;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.wwd__panel:last-child {
+  border-right: none;
 }
 
 .wwd__panel-bg {
@@ -51,8 +55,10 @@
   background-position: center;
   transition: transform 0.6s var(--ease);
 }
-.wwd__panel:hover .wwd__panel-bg {
-  transform: scale(1.06);
+@media (hover: hover) {
+  .wwd__panel:hover .wwd__panel-bg {
+    transform: scale(1.06);
+  }
 }
 
 .wwd__panel-overlay {
@@ -60,43 +66,48 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.92) 0%,
-    rgba(0,0,0,0.5) 50%,
-    rgba(0,0,0,0.15) 100%
+    rgba(10, 10, 10, 0.94) 0%,
+    rgba(10, 10, 10, 0.55) 50%,
+    rgba(10, 10, 10, 0.2) 100%
   );
   transition: background 0.4s;
 }
-.wwd__panel:hover .wwd__panel-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.95) 0%,
-    rgba(0,0,0,0.65) 50%,
-    rgba(0,0,0,0.3) 100%
-  );
+@media (hover: hover) {
+  .wwd__panel:hover .wwd__panel-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 0.96) 0%,
+      rgba(10, 10, 10, 0.7) 50%,
+      rgba(10, 10, 10, 0.3) 100%
+    );
+  }
 }
 
 .wwd__panel-content {
   position: relative;
   z-index: 2;
-  padding: 2.5rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
 }
 
 .wwd__panel-number {
   display: block;
   font-family: 'Bebas Neue', var(--font-heading);
-  font-size: 4rem;
-  color: rgba(232,65,24,0.25);
+  font-size: 3.5rem;
+  color: rgba(232, 65, 24, 0.3);
   line-height: 1;
-  margin-bottom: -0.5rem;
+  margin-bottom: -0.3rem;
   transition: color 0.3s;
 }
-.wwd__panel:hover .wwd__panel-number {
-  color: rgba(232,65,24,0.5);
+@media (hover: hover) {
+  .wwd__panel:hover .wwd__panel-number {
+    color: rgba(232, 65, 24, 0.6);
+  }
 }
 
 .wwd__panel-title {
   font-family: 'Bebas Neue', var(--font-heading);
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(2rem, 3vw, 2.7rem);
   font-weight: 400;
   color: #fff;
   letter-spacing: 0.04em;
@@ -105,18 +116,20 @@
 
 .wwd__panel-desc {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
   margin-bottom: 1.5rem;
-  max-width: 280px;
-  /* Reveal on hover */
+  max-width: 300px;
+  /* Reveal on hover for desktop */
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
 }
-.wwd__panel:hover .wwd__panel-desc {
-  opacity: 1;
-  transform: translateY(0);
+@media (hover: hover) {
+  .wwd__panel:hover .wwd__panel-desc {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .wwd__panel-cta {
@@ -129,19 +142,21 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-bottom: 2px solid var(--accent);
-  padding-bottom: 2px;
-  /* Reveal on hover — use transition shorthand carefully */
+  padding-bottom: 3px;
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.35s 0.05s var(--ease), transform 0.35s 0.05s var(--ease), color 0.2s, gap 0.2s;
+  min-height: 36px;
 }
-.wwd__panel:hover .wwd__panel-cta {
-  opacity: 1;
-  transform: translateY(0);
-}
-.wwd__panel-cta:hover {
-  color: var(--accent);
-  gap: 0.65rem;
+@media (hover: hover) {
+  .wwd__panel:hover .wwd__panel-cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .wwd__panel-cta:hover {
+    color: var(--accent);
+    gap: 0.65rem;
+  }
 }
 .wwd__panel-cta:focus-visible {
   outline: 2px solid var(--accent);
@@ -150,22 +165,40 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .wwd__header {
+    padding: 4rem 1.25rem 2.5rem;
+  }
   .wwd__panels {
     grid-template-columns: 1fr;
     min-height: auto;
   }
   .wwd__panel {
-    min-height: 380px;
+    min-height: 360px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-  /* Always show desc and cta on mobile */
   .wwd__panel-desc,
   .wwd__panel-cta {
     opacity: 1;
     transform: none;
   }
+  .wwd__panel-desc {
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .wwd__panel-content { padding: 2rem 1.5rem; }
-  .wwd__header { padding: 4rem 1.5rem 2.5rem; }
+  .wwd__header {
+    padding: 3.25rem 1rem 2rem;
+  }
+  .wwd__panel {
+    min-height: 320px;
+  }
+  .wwd__panel-content {
+    padding: 1.75rem 1.25rem;
+  }
+  .wwd__panel-number {
+    font-size: 2.8rem;
+  }
 }

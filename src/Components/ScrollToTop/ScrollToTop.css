@@ -1,7 +1,7 @@
 .scroll-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: calc(2rem + var(--safe-bottom));
+  right: max(2rem, var(--safe-right));
   z-index: 400;
   width: 46px;
   height: 46px;
@@ -11,12 +11,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(232,65,24,0.4);
+  box-shadow: 0 4px 20px rgba(232, 65, 24, 0.4);
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
+
 .scroll-top:hover {
   background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+.scroll-top:active {
+  transform: translateY(0);
 }
 .scroll-top:focus-visible {
   outline: 3px solid #fff;
@@ -25,9 +32,9 @@
 
 @media (max-width: 480px) {
   .scroll-top {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 40px;
-    height: 40px;
+    bottom: calc(1.25rem + var(--safe-bottom));
+    right: max(1.25rem, var(--safe-right));
+    width: 42px;
+    height: 42px;
   }
 }

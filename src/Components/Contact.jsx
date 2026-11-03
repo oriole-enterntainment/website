@@ -52,7 +52,7 @@ export default function Contact() {
               <div>
                 <strong>Call Us</strong>
                 <p>
-                  <a href="tel:+917830100001">+91 78301 00001 (Founder & Director)</a><br/>
+                  <a href="tel:+917830100001">+91 7830100001 (Founder & Director)</a><br/>
                   <a href="tel:+917302208919">+91 7302208919 ( General Manager )</a><br/ >
                   <a href="tel:+918057811734">+91 8057811734 ( Liaison Officer)</a>
                 </p>

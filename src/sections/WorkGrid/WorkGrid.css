@@ -12,7 +12,7 @@
 }
 
 .work-grid__filter-btn {
-  padding: 0.45rem 1.2rem;
+  padding: 0.45rem 1.15rem;
   border-radius: 999px;
   font-size: 0.82rem;
   font-weight: 600;
@@ -21,6 +21,7 @@
   border: 1.5px solid var(--border);
   cursor: pointer;
   transition: all 0.2s;
+  min-height: 38px;
 }
 .work-grid__filter-btn:hover {
   border-color: var(--accent);
@@ -45,15 +46,19 @@
 
 /* Tile */
 .work-tile {
-  background: var(--card-bg);
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.25s var(--ease), box-shadow 0.25s;
 }
-.work-tile:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+
+@media (hover: hover) {
+  .work-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .work-tile__img-wrap {
@@ -69,35 +74,49 @@
   object-fit: cover;
   transition: transform 0.5s var(--ease), opacity 0.3s;
 }
-.work-tile:hover .work-tile__img {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .work-tile:hover .work-tile__img {
+    transform: scale(1.05);
+  }
 }
 
 .work-tile__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.42);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s;
 }
-.work-tile:hover .work-tile__overlay {
-  opacity: 1;
+
+@media (hover: hover) {
+  .work-tile:hover .work-tile__overlay {
+    opacity: 1;
+  }
+}
+
+/* On touch devices, keep overlay button visible */
+@media (hover: none) {
+  .work-tile__overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.28);
+  }
 }
 
 .work-tile__play {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: rgba(232,65,24,0.9);
+  background: rgba(232, 65, 24, 0.92);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s, background 0.2s;
   cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 .work-tile__play:hover {
   transform: scale(1.1);
@@ -109,7 +128,7 @@
 }
 
 .work-tile__meta {
-  padding: 1.25rem 1.25rem 1.5rem;
+  padding: 1.25rem 1.25rem 1.4rem;
 }
 
 .work-tile__tags {
@@ -125,7 +144,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  background: rgba(232,65,24,0.08);
+  background: rgba(232, 65, 24, 0.08);
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
 }
@@ -148,12 +167,13 @@
 .video-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.88);
+  background: rgba(0, 0, 0, 0.88);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  padding-bottom: max(1rem, var(--safe-bottom));
 }
 
 .video-modal__inner {
@@ -163,6 +183,8 @@
   background: #000;
   border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .video-modal__close {
@@ -170,10 +192,10 @@
   top: 0.75rem;
   right: 0.75rem;
   z-index: 10;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
   display: flex;
   align-items: center;
@@ -181,8 +203,13 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.video-modal__close:hover { background: rgba(255,255,255,0.25); }
-.video-modal__close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.video-modal__close:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.video-modal__close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
 
 .video-modal__embed {
   position: relative;
@@ -206,8 +233,13 @@
 @media (max-width: 480px) {
   .work-grid__grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.15rem;
   }
-  /* Always show overlay on mobile */
-  .work-tile__overlay { opacity: 1; background: rgba(0,0,0,0.3); }
+  .work-grid__filters {
+    gap: 0.4rem;
+  }
+  .work-grid__filter-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+  }
 }

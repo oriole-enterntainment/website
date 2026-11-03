@@ -4,7 +4,7 @@
 
 .big-lineup-feature {
   background: linear-gradient(135deg, #161616 0%, #2a100d 100%);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dark);
   border-radius: var(--radius-lg);
   padding: 2.25rem 2.5rem;
   color: #ffffff;
@@ -14,9 +14,20 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.16);
   position: relative;
   overflow: hidden;
+}
+
+.big-lineup-feature::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(232, 65, 24, 0.22) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .big-lineup-feature__left {
@@ -40,36 +51,40 @@
 }
 
 .big-lineup-feature h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
   font-weight: 900;
   color: #ffffff;
   margin: 0;
+  line-height: 1.15;
 }
 
 .big-lineup-feature p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 0.98rem;
   margin: 0;
+  line-height: 1.5;
 }
 
 .big-lineup-feature__info {
   display: flex;
   gap: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.85);
+  flex-wrap: wrap;
 }
 
 .big-lineup-feature__btn {
   padding: 0.8rem 1.6rem;
   font-size: 0.92rem;
+  white-space: nowrap;
 }
 
 .events-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 1.5rem;
-  max-width: 700px;
+  max-width: 740px;
   margin: 0 auto;
 }
 
@@ -82,18 +97,22 @@
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
 }
 
-.event-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  border-color: var(--accent);
+@media (hover: hover) {
+  .event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+  }
 }
 
 .event-card__icon {
   font-size: 2.2rem;
+  line-height: 1;
 }
 
 .event-card__type {
@@ -109,22 +128,35 @@
   font-weight: 800;
   color: var(--text);
   margin: 0;
+  line-height: 1.3;
 }
 
 .event-card p {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
+  flex: 1;
 }
 
 @media (max-width: 600px) {
   .events-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .big-lineup-feature {
-    padding: 1.5rem;
+    padding: 1.6rem 1.4rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .big-lineup-feature__info {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .big-lineup-feature__btn {
+    width: 100%;
+    justify-content: center;
   }
 }
