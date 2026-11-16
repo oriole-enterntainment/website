@@ -71,7 +71,7 @@ export default function Footer() {
           <ul className="footer__contact-list" role="list">
             <li>
               <Phone size={15} aria-hidden="true" />
-              <a href="tel:+917830100001">+91 078301 00001</a>
+              <a href="tel:+917830100001">+91 78301 00001</a>
             </li>
             <li>
               <Phone size={15} aria-hidden="true" />
