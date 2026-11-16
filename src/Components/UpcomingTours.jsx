@@ -31,9 +31,9 @@ const rawArtistsData = [
     image: "hifaf.jpg",
     description: "Himalayan Indie Film and Arts Festival.",
     shows: [
-      "Dec 11, 2026 - TBA",
-      "Dec 12, 2026 - TBA",
-      "Dec 13, 2026 - TBA"
+      "Dec 11, 2026 - Manali",
+      "Dec 12, 2026 - Manali",
+      "Dec 13, 2026 - Manali"
     ],
     instagram: "https://www.instagram.com/hifaf_/?hl=en",
     pdfs: [
@@ -356,8 +356,7 @@ const rawArtistsData = [
     description: "Hilarious and witty comic taking the internet by storm.",
     shows: [
      
-      "Oct 31, 2026 - Indore",
-      "Nov 1, 2026 - Bhopal",
+     
       "Nov 21, 2026 - Chandigarh",
       "Nov 22, 2026 - Ludhiana",
       "Nov 27, 2026 - Vadodara",
