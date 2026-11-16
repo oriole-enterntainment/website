@@ -198,10 +198,7 @@ const rawArtistsData = [
     description: "Master of relatable anecdotes and storytelling.",
     shows: [
       
-      
-      "Nov 27, 2026 - Jawaharlal Nehra Memorial Hall, Pune ",
       "Nov 28, 2026 - DOME, Mumbai",
-      "Nov 29, 2026 - Dhono Dhanyo Auditorium, Kolkata",
       "Dec 5, 2026 - Nazrul Mancha: Southern Avenue, Kolkata",
       "Dec 12, 2026 - Jawaharlal Nehra Memorial Hall, Pune",
       "Dec 19, 2026 - KD Jadhav Indoor Hall, New Delhi",
